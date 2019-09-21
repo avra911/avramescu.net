@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/</link>
+    <description>Recent content in Tags on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.avramescu.net/tags/docker/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>magento</title>
+      <link>https://www.avramescu.net/tags/magento/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpstorm</title>
+      <link>https://www.avramescu.net/tags/phpstorm/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/phpstorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>x2go</title>
+      <link>https://www.avramescu.net/tags/x2go/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/x2go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xdebug</title>
+      <link>https://www.avramescu.net/tags/xdebug/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/xdebug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://www.avramescu.net/tags/kubernetes/</link>
+      <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>magekube</title>
+      <link>https://www.avramescu.net/tags/magekube/</link>
+      <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/magekube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>public_speaking</title>
+      <link>https://www.avramescu.net/tags/public_speaking/</link>
+      <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/public_speaking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data migration tool</title>
+      <link>https://www.avramescu.net/tags/data-migration-tool/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/data-migration-tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>magento 2.x</title>
+      <link>https://www.avramescu.net/tags/magento-2.x/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/magento-2.x/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcloud</title>
+      <link>https://www.avramescu.net/tags/gcloud/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/gcloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>https://www.avramescu.net/tags/elasticsearch/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intreaba.net</title>
+      <link>https://www.avramescu.net/tags/intreaba.net/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/intreaba.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ror</title>
+      <link>https://www.avramescu.net/tags/ror/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/ror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://www.avramescu.net/tags/docker-compose/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hostname</title>
+      <link>https://www.avramescu.net/tags/hostname/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/hostname/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hosts-manager</title>
+      <link>https://www.avramescu.net/tags/hosts-manager/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/hosts-manager/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

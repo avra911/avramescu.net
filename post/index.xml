@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/post/</link>
+    <description>Recent content in Posts on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.avramescu.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Working on remote server locally</title>
+      <link>https://www.avramescu.net/working-on-remote-server-locally/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/working-on-remote-server-locally/</guid>
+      <description>&lt;p&gt;This could sound weird, but should be strong as &lt;em&gt;think global, act local&lt;/em&gt;: &lt;strong&gt;work on remote server&lt;/strong&gt;, locally.&lt;/p&gt;
+
+&lt;p&gt;Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Meet Magento 2017 Romania</title>
+      <link>https://www.avramescu.net/meet-magento-2017-romania/</link>
+      <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/meet-magento-2017-romania/</guid>
+      <description>&lt;p&gt;This year I was excited and honoured to have a workshop at Meet Magento 2017 Romania on October 17th.&lt;/p&gt;
+
+&lt;p&gt;From the arrival, the venue Grand Hotel Italia was great and we were very warm welcome, especially after a longer flight time because of the weather conditions (more precisely the airport was closed due to an intense fog and the airplane had to make circles in the air for about one hour).&lt;/p&gt;
+
+&lt;p&gt;The organisers did a really great job and they switched my speech. Ben Marks cooled me down with a bottle of water, which proved more than useful for my emotions which I usually have when I present in public.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My first speech – Meet Magento 2017 Sweden</title>
+      <link>https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/</guid>
+      <description>&lt;p&gt;Nordic Web Team organised Meet Magento 2017 Sweden for the second time, in Stockholm. The event toked place in Münchenbryggeriet (or the “Brewery Conference Center”).&lt;/p&gt;
+
+&lt;p&gt;After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &amp;ldquo;&lt;em&gt;a particularly interesting talk about Kubernetes and Magento 2&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Insides about migrating Magento 1.x to Magento 2.x</title>
+      <link>https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/</guid>
+      <description>&lt;p&gt;Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.&lt;/p&gt;
+
+&lt;p&gt;To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>First impression about Kubernetes</title>
+      <link>https://www.avramescu.net/first-impression-about-kubernetes/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/first-impression-about-kubernetes/</guid>
+      <description>&lt;p&gt;With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.&lt;/p&gt;
+
+&lt;p&gt;There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sneak peak intreaba.net (#RoR, #elasticsearch)</title>
+      <link>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</guid>
+      <description>&lt;p&gt;A new simplified way of adding a question and getting answers. First project will be launch only in romanian and will be build with #RoR, will have facebook authentification, #elasticsearch autocomplete, #bootstrap responsive theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Access docker application by hostname</title>
+      <link>https://www.avramescu.net/access-docker-application-by-hostname/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/access-docker-application-by-hostname/</guid>
+      <description>&lt;p&gt;To access a docker application by a particular hostname, the file: &lt;code&gt;/var/lib/docker/containers/CONTAINER_ID/config.json&lt;/code&gt; requires the change of the Hostname and Domainname  &lt;code&gt;&amp;quot;Config&amp;quot;:{&amp;quot;Hostname&amp;quot;:&amp;quot;www&amp;quot;,&amp;quot;Domainname&amp;quot;:&amp;quot;example.local&amp;quot;, ...}&lt;/code&gt;. This way, the container will have all the necesarry information.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

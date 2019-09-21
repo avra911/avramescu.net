@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ror on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/ror/</link>
+    <description>Recent content in ror on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Dec 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.avramescu.net/tags/ror/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sneak peak intreaba.net (#RoR, #elasticsearch)</title>
+      <link>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</guid>
+      <description>&lt;p&gt;A new simplified way of adding a question and getting answers. First project will be launch only in romanian and will be build with #RoR, will have facebook authentification, #elasticsearch autocomplete, #bootstrap responsive theme.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

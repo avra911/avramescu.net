@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hostname on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/hostname/</link>
+    <description>Recent content in hostname on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Nov 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.avramescu.net/tags/hostname/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Access docker application by hostname</title>
+      <link>https://www.avramescu.net/access-docker-application-by-hostname/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/access-docker-application-by-hostname/</guid>
+      <description>&lt;p&gt;To access a docker application by a particular hostname, the file: &lt;code&gt;/var/lib/docker/containers/CONTAINER_ID/config.json&lt;/code&gt; requires the change of the Hostname and Domainname  &lt;code&gt;&amp;quot;Config&amp;quot;:{&amp;quot;Hostname&amp;quot;:&amp;quot;www&amp;quot;,&amp;quot;Domainname&amp;quot;:&amp;quot;example.local&amp;quot;, ...}&lt;/code&gt;. This way, the container will have all the necesarry information.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

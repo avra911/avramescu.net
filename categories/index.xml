@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/categories/</link>
+    <description>Recent content in Categories on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://www.avramescu.net/categories/docker/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magento</title>
+      <link>https://www.avramescu.net/categories/magento/</link>
+      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://www.avramescu.net/categories/kubernetes/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://www.avramescu.net/categories/projects/</link>
+      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
