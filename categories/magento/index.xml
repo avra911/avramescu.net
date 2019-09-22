@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Magento on Razvan-Marian Avramescu</title>
+    <title>magento on Razvan-Marian Avramescu</title>
     <link>https://www.avramescu.net/categories/magento/</link>
-    <description>Recent content in Magento on Razvan-Marian Avramescu</description>
+    <description>Recent content in magento on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
@@ -55,17 +55,6 @@
       <description>&lt;p&gt;Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.&lt;/p&gt;
 
 &lt;p&gt;To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>First impression about Kubernetes</title>
-      <link>https://www.avramescu.net/first-impression-about-kubernetes/</link>
-      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/first-impression-about-kubernetes/</guid>
-      <description>&lt;p&gt;With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.&lt;/p&gt;
-
-&lt;p&gt;There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.&lt;/p&gt;</description>
     </item>
     
   </channel>
