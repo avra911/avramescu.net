@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Razvan-Marian Avramescu</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 02:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>docker</title>
       <link>https://www.avramescu.net/tags/docker/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/docker/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>magento</title>
       <link>https://www.avramescu.net/tags/magento/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/magento/</guid>
       <description></description>
@@ -32,16 +32,34 @@
     <item>
       <title>phpstorm</title>
       <link>https://www.avramescu.net/tags/phpstorm/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/phpstorm/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>woocommerce</title>
+      <link>https://www.avramescu.net/tags/woocommerce/</link>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/woocommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://www.avramescu.net/tags/wordpress/</link>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>x2go</title>
       <link>https://www.avramescu.net/tags/x2go/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/x2go/</guid>
       <description></description>
@@ -50,7 +68,7 @@
     <item>
       <title>xdebug</title>
       <link>https://www.avramescu.net/tags/xdebug/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/xdebug/</guid>
       <description></description>

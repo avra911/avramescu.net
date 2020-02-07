@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Razvan-Marian Avramescu</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 02:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>magento</title>
       <link>https://www.avramescu.net/categories/magento/</link>
-      <pubDate>Tue, 30 Jan 2018 02:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/categories/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://www.avramescu.net/categories/wordpress/</link>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/wordpress/</guid>
       <description></description>
     </item>
     

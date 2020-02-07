@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>x2go on Razvan-Marian Avramescu</title>
@@ -6,10 +6,21 @@
     <description>Recent content in x2go on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Jan 2018 02:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2020 02:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.avramescu.net/tags/x2go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WooCommerce vs Magento - What’s Better for Your Business in 2020?</title>
+      <link>https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/</link>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;WooCommerce&lt;/strong&gt; and &lt;strong&gt;Magento&lt;/strong&gt; proudly stand as two of the most popular e-commerce solutions that power jointly nearly 40% of all e-stores on the web. While both have their strengths and weaknesses, it becomes quite challenging for a merchant to choose the best one amongst the two.&lt;/p&gt;
+
+&lt;p&gt;This article is aimed to help you give the answer to an ultimate question: &lt;em&gt;What&amp;rsquo;s better for your business?&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Working on remote server locally</title>
