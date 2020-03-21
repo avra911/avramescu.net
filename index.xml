@@ -18,7 +18,6 @@
       
       <guid>https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/</guid>
       <description>&lt;p&gt;&lt;strong&gt;WooCommerce&lt;/strong&gt; and &lt;strong&gt;Magento&lt;/strong&gt; proudly stand as two of the most popular e-commerce solutions that power jointly nearly 40% of all e-stores on the web. While both have their strengths and weaknesses, it becomes quite challenging for a merchant to choose the best one amongst the two.&lt;/p&gt;
-
 &lt;p&gt;This article is aimed to help you give the answer to an ultimate question: &lt;em&gt;What&amp;rsquo;s better for your business?&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
@@ -29,7 +28,6 @@
       
       <guid>https://www.avramescu.net/working-on-remote-server-locally/</guid>
       <description>&lt;p&gt;This could sound weird, but should be strong as &lt;em&gt;think global, act local&lt;/em&gt;: &lt;strong&gt;work on remote server&lt;/strong&gt;, locally.&lt;/p&gt;
-
 &lt;p&gt;Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).&lt;/p&gt;</description>
     </item>
     
@@ -40,9 +38,7 @@
       
       <guid>https://www.avramescu.net/meet-magento-2017-romania/</guid>
       <description>&lt;p&gt;This year I was excited and honoured to have a workshop at Meet Magento 2017 Romania on October 17th.&lt;/p&gt;
-
 &lt;p&gt;From the arrival, the venue Grand Hotel Italia was great and we were very warm welcome, especially after a longer flight time because of the weather conditions (more precisely the airport was closed due to an intense fog and the airplane had to make circles in the air for about one hour).&lt;/p&gt;
-
 &lt;p&gt;The organisers did a really great job and they switched my speech. Ben Marks cooled me down with a bottle of water, which proved more than useful for my emotions which I usually have when I present in public.&lt;/p&gt;</description>
     </item>
     
@@ -53,8 +49,7 @@
       
       <guid>https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/</guid>
       <description>&lt;p&gt;Nordic Web Team organised Meet Magento 2017 Sweden for the second time, in Stockholm. The event toked place in Münchenbryggeriet (or the “Brewery Conference Center”).&lt;/p&gt;
-
-&lt;p&gt;After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &amp;ldquo;&lt;em&gt;a particularly interesting talk about Kubernetes and Magento 2&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;</description>
+&lt;p&gt;After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &amp;ldquo;&lt;em&gt;a particularly interesting talk about Kubernetes and Magento 2&lt;/em&gt;&amp;quot;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -64,7 +59,6 @@
       
       <guid>https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/</guid>
       <description>&lt;p&gt;Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.&lt;/p&gt;
-
 &lt;p&gt;To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).&lt;/p&gt;</description>
     </item>
     
@@ -75,7 +69,6 @@
       
       <guid>https://www.avramescu.net/first-impression-about-kubernetes/</guid>
       <description>&lt;p&gt;With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.&lt;/p&gt;
-
 &lt;p&gt;There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.&lt;/p&gt;</description>
     </item>
     

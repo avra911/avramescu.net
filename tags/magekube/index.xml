@@ -18,9 +18,7 @@
       
       <guid>https://www.avramescu.net/meet-magento-2017-romania/</guid>
       <description>&lt;p&gt;This year I was excited and honoured to have a workshop at Meet Magento 2017 Romania on October 17th.&lt;/p&gt;
-
 &lt;p&gt;From the arrival, the venue Grand Hotel Italia was great and we were very warm welcome, especially after a longer flight time because of the weather conditions (more precisely the airport was closed due to an intense fog and the airplane had to make circles in the air for about one hour).&lt;/p&gt;
-
 &lt;p&gt;The organisers did a really great job and they switched my speech. Ben Marks cooled me down with a bottle of water, which proved more than useful for my emotions which I usually have when I present in public.&lt;/p&gt;</description>
     </item>
     
@@ -31,8 +29,7 @@
       
       <guid>https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/</guid>
       <description>&lt;p&gt;Nordic Web Team organised Meet Magento 2017 Sweden for the second time, in Stockholm. The event toked place in Münchenbryggeriet (or the “Brewery Conference Center”).&lt;/p&gt;
-
-&lt;p&gt;After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &amp;ldquo;&lt;em&gt;a particularly interesting talk about Kubernetes and Magento 2&lt;/em&gt;&amp;rdquo;.&lt;/p&gt;</description>
+&lt;p&gt;After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &amp;ldquo;&lt;em&gt;a particularly interesting talk about Kubernetes and Magento 2&lt;/em&gt;&amp;quot;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,7 +39,6 @@
       
       <guid>https://www.avramescu.net/first-impression-about-kubernetes/</guid>
       <description>&lt;p&gt;With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.&lt;/p&gt;
-
 &lt;p&gt;There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.&lt;/p&gt;</description>
     </item>
     

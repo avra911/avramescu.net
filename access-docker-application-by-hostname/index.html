@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.67.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="To access a docker application by a particular hostname, the file: /var/lib/docker/containers/CONTAINER_ID/config.json requires the change of the Hostname and Domainname  &quot;Config&quot;:{&quot;Hostname&quot;:&quot;www&quot;,&quot;Domainname&quot;:&quot;example.local&quot;, ...}. This way, the container will have all the necesarry information.">
@@ -84,6 +84,10 @@
     
     <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+
+    
+      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -295,65 +299,51 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>To access a docker application by a particular hostname, the file: <code>/var/lib/docker/containers/CONTAINER_ID/config.json</code> requires the change of the Hostname and Domainname  <code>&quot;Config&quot;:{&quot;Hostname&quot;:&quot;www&quot;,&quot;Domainname&quot;:&quot;example.local&quot;, ...}</code>. This way, the container will have all the necesarry information.</p>
-
 <p>An elegant way, instead of directly editing the configuration file, is to use docker-compose (aka fig) to run the application:</p>
-
-<pre><code class="language-yaml">...
-    web:
-        image: example/application
-        hostname: www
-        domainname: example.local
-        ports:
-            - &quot;80:80&quot;
-        volumes:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
+    <span style="color:#66d9ef">web</span>:
+        <span style="color:#66d9ef">image</span>: example/application
+        <span style="color:#66d9ef">hostname</span>: www
+        <span style="color:#66d9ef">domainname</span>: example.local
+        <span style="color:#66d9ef">ports</span>:
+            - <span style="color:#e6db74">&#34;80:80&#34;</span>
+        <span style="color:#66d9ef">volumes</span>:
             - /var/www
 ...
-</code></pre>
+</code></pre></div><p>The next little script will search all active containers, get that necessary info for the <code>/etc/hosts</code> file and adjust it with the required names:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+FILE<span style="color:#f92672">=</span>/etc/hosts
+DEFAULT_DOMAIN<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;example.local&#39;</span>
+<span style="color:#66d9ef">for</span> CID in <span style="color:#66d9ef">$(</span>docker ps  --filter<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name=</span>$name<span style="color:#e6db74">&#34;</span> -q<span style="color:#66d9ef">)</span>; <span style="color:#66d9ef">do</span>
+  IP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>docker inspect --format <span style="color:#e6db74">&#39;{{ .NetworkSettings.IPAddress }}&#39;</span> <span style="color:#e6db74">${</span>CID<span style="color:#e6db74">}</span><span style="color:#66d9ef">)</span>
+  HOSTNAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>docker inspect --format <span style="color:#e6db74">&#39;{{ .Config.Hostname }}&#39;</span> <span style="color:#e6db74">${</span>CID<span style="color:#e6db74">}</span><span style="color:#66d9ef">)</span>
+  DOMAINNAME<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>docker inspect --format <span style="color:#e6db74">&#39;{{ .Config.Domainname }}&#39;</span> <span style="color:#e6db74">${</span>CID<span style="color:#e6db74">}</span><span style="color:#66d9ef">)</span>
+  <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$HOSTNAME<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">[</span> -n <span style="color:#e6db74">&#34;</span>$DOMAINNAME<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    HOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$HOSTNAME<span style="color:#e6db74">.</span>$DOMAINNAME<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    HOST<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$CID<span style="color:#e6db74">.</span>$DEFAULT_DOMAIN<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">fi</span>
 
-<p>The next little script will search all active containers, get that necessary info for the <code>/etc/hosts</code> file and adjust it with the required names:</p>
+  sed -i <span style="color:#e6db74">&#34;/\b</span>$IP<span style="color:#e6db74">\b/d&#34;</span> $FILE
 
-<pre><code class="language-bash">#!/bin/bash
+  <span style="color:#66d9ef">if</span> grep -q $HOST <span style="color:#e6db74">&#34;</span>$FILE<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">then</span>
+    sed -i <span style="color:#e6db74">&#34;/</span>$HOST<span style="color:#e6db74">/ s/.*/</span>$IP<span style="color:#e6db74">\t</span>$HOST<span style="color:#e6db74">/g&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    echo -e <span style="color:#e6db74">&#34;\n</span>$IP<span style="color:#e6db74">	</span>$HOST<span style="color:#e6db74">&#34;</span> &gt;&gt; $FILE
+  <span style="color:#66d9ef">fi</span>
 
-FILE=/etc/hosts
-DEFAULT_DOMAIN='example.local'
-for CID in $(docker ps  --filter=&quot;name=$name&quot; -q); do
-  IP=$(docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${CID})
-  HOSTNAME=$(docker inspect --format '{{ .Config.Hostname }}' ${CID})
-  DOMAINNAME=$(docker inspect --format '{{ .Config.Domainname }}' ${CID})
-  if [ -n &quot;$HOSTNAME&quot; ] &amp;&amp; [ -n &quot;$DOMAINNAME&quot; ]; then
-    HOST=&quot;$HOSTNAME.$DOMAINNAME&quot;
-  else
-    HOST=&quot;$CID.$DEFAULT_DOMAIN&quot;
-  fi
-
-  sed -i &quot;/\b$IP\b/d&quot; $FILE
-
-  if grep -q $HOST &quot;$FILE&quot;; then
-    sed -i &quot;/$HOST/ s/.*/$IP\t$HOST/g&quot;
-  else
-    echo -e &quot;\n$IP	$HOST&quot; &gt;&gt; $FILE
-  fi
-
-done
-</code></pre>
-
-<p>After running the script, the application should be available now at: <code>http://www.example.local</code>.</p>
-
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>After running the script, the application should be available now at: <code>http://www.example.local</code>.</p>
 <p>UPDATED:</p>
-
 <p>Another way is to add a bridge network on the host, giving a static IP address such as 192.168.33.100.</p>
-
-<p><img src="https://res.cloudinary.com/avra911/image/upload/v1569602934/avramescu.net/img/access-docker-application-by-hostname.png" alt="Access docker application by hostname" /></p>
-
+<p><img src="https://res.cloudinary.com/avra911/image/upload/v1569602934/avramescu.net/img/access-docker-application-by-hostname.png" alt="Access docker application by hostname"></p>
 <p>After that the docker port forwarding which accept IP address as well should be use. In docker compose yaml the syntax is:</p>
-
-<pre><code class="language-yaml">...
-    ports:
-        - &quot;192.168.33.100:80:80&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
+    <span style="color:#66d9ef">ports</span>:
+        - <span style="color:#e6db74">&#34;192.168.33.100:80:80&#34;</span>
 ...
-</code></pre>
-
-<p>The file <code>/etc/hosts</code> needs to be updated with the IP pointing to <code>www.example.local</code>. This way can be added as many bridges having different static IPs with only only modification of the /etc/hosts file per docker/docker-compose project.</p>
+</code></pre></div><p>The file <code>/etc/hosts</code> needs to be updated with the IP pointing to <code>www.example.local</code>. This way can be added as many bridges having different static IPs with only only modification of the /etc/hosts file per docker/docker-compose project.</p>
               
             </div>
           </div>

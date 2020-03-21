@@ -18,7 +18,6 @@
       
       <guid>https://www.avramescu.net/first-impression-about-kubernetes/</guid>
       <description>&lt;p&gt;With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.&lt;/p&gt;
-
 &lt;p&gt;There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.&lt;/p&gt;</description>
     </item>
     

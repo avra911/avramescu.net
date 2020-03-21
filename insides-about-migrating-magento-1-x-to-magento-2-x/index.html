@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.67.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.
-
 To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).">
 
 
 <meta property="og:description" content="Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.
-
 To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Insides about migrating Magento 1.x to Magento 2.x">
@@ -23,10 +21,8 @@ To avoid additional issues is recommended to start first with the migration on a
 <meta property="twitter:url" content="https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/">
 <meta property="og:site_name" content="Razvan-Marian Avramescu">
 <meta property="og:description" content="Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.
-
 To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).">
 <meta name="twitter:description" content="Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.
-
 To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).">
 <meta property="og:locale" content="en-us">
 
@@ -88,6 +84,10 @@ To avoid additional issues is recommended to start first with the migration on a
     
     <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+
+    
+      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -299,19 +299,12 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.</p>
-
 <p>To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).</p>
-
-<p><center><img src="https://res.cloudinary.com/avra911/image/upload/v1569602934/avramescu.net/img/migrating-magento-1-x-to-magento-2-x-1.png" alt="Insides about migrating Magento 1.x to Magento 2.x" /></center></p>
-
-<p>The <a href="https://devdocs.magento.com/guides/v2.3/migration/migration-tool.html" target="_blank">documentation</a> is straight forward. The most important aspect here is to create the configuration files with all the ignore fields, documents and mapping rules. You can find out the list of necessary settings if you run the migration tool once, while it will inform about all the missing aspects during the validation process.</p>
-
-<p><strong>Very important is to set the database for magento 1.x in config.xml pointing to the live database, because the migration tool populates m2<em>cl</em>* tables by mysql triggers with all new items added after migration, in case you will want to use migration delta, to bring all new items.</strong></p>
-
+<!-- raw HTML omitted -->
+<p>The <!-- raw HTML omitted -->documentation<!-- raw HTML omitted --> is straight forward. The most important aspect here is to create the configuration files with all the ignore fields, documents and mapping rules. You can find out the list of necessary settings if you run the migration tool once, while it will inform about all the missing aspects during the validation process.</p>
+<p>**Very important is to set the database for magento 1.x in config.xml pointing to the live database, because the migration tool populates m2_cl_* tables by mysql triggers with all new items added after migration, in case you will want to use migration delta, to bring all new items.**</p>
 <p>Once the migration is done, the old media  folder from magento 1.x must be synced into pub/media of the new magento 2.x instance. The entire settings and data migration takes in average about around 10 hours in a local docker enviroment (DevBox).</p>
-
 <p>From this point the theme design might is a lot easier having real data to work with.</p>
-
 <p>The hard work might be to setup and develop everything needed for the new M2 store. If the old magento 1.x dit not used too many customisations, then it might be a happy path, if not happy coding!</p>
               
             </div>

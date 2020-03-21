@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.67.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="This could sound weird, but should be strong as think global, act local: work on remote server, locally.
-
 Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).">
 
 
 <meta property="og:description" content="This could sound weird, but should be strong as think global, act local: work on remote server, locally.
-
 Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Working on remote server locally">
@@ -23,10 +21,8 @@ Many programmers are using Mac, while some other developers are taking advantage
 <meta property="twitter:url" content="https://www.avramescu.net/working-on-remote-server-locally/">
 <meta property="og:site_name" content="Razvan-Marian Avramescu">
 <meta property="og:description" content="This could sound weird, but should be strong as think global, act local: work on remote server, locally.
-
 Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).">
 <meta name="twitter:description" content="This could sound weird, but should be strong as think global, act local: work on remote server, locally.
-
 Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).">
 <meta property="og:locale" content="en-us">
 
@@ -96,6 +92,10 @@ Many programmers are using Mac, while some other developers are taking advantage
     
     <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+
+    
+      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -307,23 +307,14 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>This could sound weird, but should be strong as <em>think global, act local</em>: <strong>work on remote server</strong>, locally.</p>
-
 <p>Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).</p>
-
 <p>After trying a lots of interesting tools and ideas, starting with Virtualbox, Vagrant, Docker, in all available platforms and finishing with x2go client (from multiple platforms) to a linux server machine, was time to take a deep breath and take things slowly and first of all remember what we were looking for, from the very beginning, which proved to be the key to the answer to all of the problems (or at least the important ones).</p>
-
 <p>X2go works actually well for those minutes before completely freezing (with xrender set to true) and that makes it a hard thing to leave or forget (see this <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206240979-intellij-10-5-with-xrender-JDK-1-7-enabled">BUG report</a> for details about PHPStorm/Java applications), while on the other hand giving up on xrender makes it stable but unpleasantly very laggy.</p>
-
 <p><strong>If you work on a dedicated tasks/feature, the answer is related to number of files you need touch/edit/create, which is significantly very small in general.</strong></p>
-
 <p>For example docker-compose on Mac makes it extremely slow while using volumes to share entire project between Host and Guest. Magento 2.x projects, without cache, takes ages to load a page in a MacBook Pro 13-inch, Early 2015, even with the Flash SSD storage, while it acts naturally in a linux machine and there is no difference between running services locally on the system or running them from the containers.</p>
-
 <p>To have the natural look and feel we decided to separate the application server and the working environment and share only the piece of code (folders) we work on it (for example a single module directory). It means there is a <strong>server</strong> somewhere up and running with ssh access and xDebug configured for remote connection (acting as working environment server) and a <strong>machine where the editor is installed</strong>. In the editor we clone the project repository, run composer install and we mount for example the module folder where we want to develop the new feature via sshfs.</p>
-
 <p>This feels naturally in host machine and also feels naturally in guest system. Once the feature is developed, the changes can be committed, deployed (from any machine host/guest), the folder shared is unmounted and then, the project can be checkout to the latest committed version. The step could be repeated for any new future/bugfix/module. If your editor allows breakpoints and xDebug configuration, you can debug the code simply by mapping local/remote paths into the server configuration.</p>
-
 <p><strong>You basically have the power of the linux server (which you can close when is not used, considering the work in done in a dedicated working machine, not staging or dev). All the power at the comfort of your operating system and tools.</strong></p>
-
 <p><strong>This could not be more convenient than that!</strong></p>
               
             </div>

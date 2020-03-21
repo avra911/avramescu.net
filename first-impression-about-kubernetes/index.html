@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.67.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.
-
 There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.">
 
 
 <meta property="og:description" content="With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.
-
 There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="First impression about Kubernetes">
@@ -23,10 +21,8 @@ There are also alternatives such as docker swarm (which has a more gengle learni
 <meta property="twitter:url" content="https://www.avramescu.net/first-impression-about-kubernetes/">
 <meta property="og:site_name" content="Razvan-Marian Avramescu">
 <meta property="og:description" content="With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.
-
 There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.">
 <meta name="twitter:description" content="With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.
-
 There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.">
 <meta property="og:locale" content="en-us">
 
@@ -92,6 +88,10 @@ There are also alternatives such as docker swarm (which has a more gengle learni
     
     <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+
+    
+      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -303,34 +303,26 @@ if (!doNotTrack) {
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.</p>
-
 <p>There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.</p>
-
 <p>Things are getting up and running fast enough (reuse the existing fpm, nginx, redis, varnish images and creating some “services and pods”), they look rock solid and give you a good confidence on the final product.</p>
-
 <p>The full setup so far includes:</p>
-
 <ol>
 <li>nginx ssl termination (with letsencrypt certificates),</li>
-<li>varnish for FPC,<br /></li>
+<li>varnish for FPC,</li>
 <li>redis,</li>
 <li>nginx+fpm with autoscaling,</li>
 <li>a NFS server for sharing the necessary the data across different nodes.</li>
 <li>There is also a cron container for the application, taking care of the letsencrypt renew as well.</li>
 <li>The sql proxy container is just making the secure connection to a gcloud SQL instance, the missing part so far from the puzzle.</li>
 </ol>
-
-<p><img src="https://res.cloudinary.com/avra911/image/upload/v1569602935/avramescu.net/img/first-impression-about-kubernetes.png" alt="Magento 2.x on Kubernetes" /></p>
-
+<p><img src="https://res.cloudinary.com/avra911/image/upload/v1569602935/avramescu.net/img/first-impression-about-kubernetes.png" alt="Magento 2.x on Kubernetes"></p>
 <p>Capistrano container to allow Magento deploys, because is a pretty addictive tool, is a work in progress.</p>
-
 <p>What seems like a missing feature is the <code>over capacity</code> autoscaling of the minion nodes, but still looks extremely powerful without it.</p>
-
 <p>EDITED (28 May 2017): Capistrano container was added in the pre-alpha version + we just switched from GCE provider to GKE and seems the autoscaling is directly related to pods waiting to be created, which is amazing:</p>
-
 <blockquote>
 <p>Cluster Autoscaler periodically checks whether there are any pods waiting for a node with free resources and are not being scheduled. If such pods exist, and the Cluster Autoscaler determines that resizing a node pool would allow the pod to be scheduled, then a node pool resize is executed.</p>
-
+</blockquote>
+<blockquote>
 <p>Cluster Autoscaler also monitors the usage of all nodes. If a node is not needed for an extended period of time and all of its pods can be easily scheduled elsewhere then the node is deleted.</p>
 </blockquote>
               
