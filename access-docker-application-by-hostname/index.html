@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.67.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="To access a docker application by a particular hostname, the file: /var/lib/docker/containers/CONTAINER_ID/config.json requires the change of the Hostname and Domainname  &quot;Config&quot;:{&quot;Hostname&quot;:&quot;www&quot;,&quot;Domainname&quot;:&quot;example.local&quot;, ...}. This way, the container will have all the necesarry information.">
@@ -49,10 +49,6 @@
 
 <meta name="twitter:card" content="summary">
 
-  <meta name="twitter:site" content="@captivintrafic">
-
-
-  <meta name="twitter:creator" content="@captivintrafic">
 
 
 
@@ -104,7 +100,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     
     
   </head>
@@ -186,16 +181,6 @@ if (!doNotTrack) {
     </a>
   </li>
 
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.avramescu.net/#about">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-      
-      <span class="sidebar-button-desc">About</span>
-    </a>
-  </li>
-
 
     </ul>
     <ul class="sidebar-buttons">
@@ -232,11 +217,11 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://twitter.com/captivintrafic" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about">
     
-      <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
-      <span class="sidebar-button-desc">Twitter</span>
+      <span class="sidebar-button-desc">About</span>
     </a>
   </li>
 
@@ -301,14 +286,14 @@ if (!doNotTrack) {
               <p>To access a docker application by a particular hostname, the file: <code>/var/lib/docker/containers/CONTAINER_ID/config.json</code> requires the change of the Hostname and Domainname  <code>&quot;Config&quot;:{&quot;Hostname&quot;:&quot;www&quot;,&quot;Domainname&quot;:&quot;example.local&quot;, ...}</code>. This way, the container will have all the necesarry information.</p>
 <p>An elegant way, instead of directly editing the configuration file, is to use docker-compose (aka fig) to run the application:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
-    <span style="color:#66d9ef">web</span>:
-        <span style="color:#66d9ef">image</span>: example/application
-        <span style="color:#66d9ef">hostname</span>: www
-        <span style="color:#66d9ef">domainname</span>: example.local
-        <span style="color:#66d9ef">ports</span>:
+    <span style="color:#f92672">web</span>:
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">example/application</span>
+        <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">www</span>
+        <span style="color:#f92672">domainname</span>: <span style="color:#ae81ff">example.local</span>
+        <span style="color:#f92672">ports</span>:
             - <span style="color:#e6db74">&#34;80:80&#34;</span>
-        <span style="color:#66d9ef">volumes</span>:
-            - /var/www
+        <span style="color:#f92672">volumes</span>:
+            - <span style="color:#ae81ff">/var/www</span>
 ...
 </code></pre></div><p>The next little script will search all active containers, get that necessary info for the <code>/etc/hosts</code> file and adjust it with the required names:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
@@ -340,7 +325,7 @@ DEFAULT_DOMAIN<span style="color:#f92672">=</span><span style="color:#e6db74">&#
 <p><img src="https://res.cloudinary.com/avra911/image/upload/v1569602934/avramescu.net/img/access-docker-application-by-hostname.png" alt="Access docker application by hostname"></p>
 <p>After that the docker port forwarding which accept IP address as well should be use. In docker compose yaml the syntax is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
-    <span style="color:#66d9ef">ports</span>:
+    <span style="color:#f92672">ports</span>:
         - <span style="color:#e6db74">&#34;192.168.33.100:80:80&#34;</span>
 ...
 </code></pre></div><p>The file <code>/etc/hosts</code> needs to be updated with the IP pointing to <code>www.example.local</code>. This way can be added as many bridges having different static IPs with only only modification of the /etc/hosts file per docker/docker-compose project.</p>
@@ -447,7 +432,7 @@ DEFAULT_DOMAIN<span style="color:#f92672">=</span><span style="color:#e6db74">&#
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 Razvan Avramescu. Gorgeous theme by <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme">Thibaud Leprêtre</a>. All Rights Reserved
+    &copy; 2024 Razvan Avramescu. Gorgeous theme by <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme">Thibaud Leprêtre</a>. All Rights Reserved
   </span>
 </footer>
 
@@ -573,7 +558,7 @@ DEFAULT_DOMAIN<span style="color:#f92672">=</span><span style="color:#e6db74">&#
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        Bucharest Sector 4, Romania
+        Bucharest, Romania
       </div>
     
   </div>
