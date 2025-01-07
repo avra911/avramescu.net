@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2020 02:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>docker</title>
-      <link>https://www.avramescu.net/tags/docker/</link>
-      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      <title>magekube</title>
+      <link>https://www.avramescu.net/tags/magekube/</link>
+      <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
       
-      <guid>https://www.avramescu.net/tags/docker/</guid>
+      <guid>https://www.avramescu.net/tags/magekube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>magento</title>
       <link>https://www.avramescu.net/tags/magento/</link>
-      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/magento/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://www.avramescu.net/tags/docker/</link>
+      <pubDate>Sat, 01 Feb 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -76,15 +85,6 @@
       <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>magekube</title>
-      <link>https://www.avramescu.net/tags/magekube/</link>
-      <pubDate>Tue, 30 Jan 2018 01:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/tags/magekube/</guid>
       <description></description>
     </item>
     
