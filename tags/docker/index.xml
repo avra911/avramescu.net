@@ -6,7 +6,16 @@
     <description>Recent content in docker on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2020 02:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Stack as a Magento Developer</title>
+      <link>https://www.avramescu.net/my-stack-as-a-magento-developer/</link>
+      <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/my-stack-as-a-magento-developer/</guid>
+      <description>&lt;p&gt;As a Magento developer, having the right tools and technologies at your disposal is crucial for efficient development and deployment. Here’s a look at the stack I use to streamline my workflow and enhance productivity.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>WooCommerce vs Magento - What’s Better for Your Business in 2020?</title>
       <link>https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/</link>

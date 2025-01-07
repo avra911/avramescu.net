@@ -5,16 +5,28 @@
     <loc>https://www.avramescu.net/categories/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/tags/magekube/</loc>
+    <loc>https://www.avramescu.net/tags/ddev/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/</loc>
+    <loc>https://www.avramescu.net/tags/docker/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/git/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/github/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/magento/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/magento/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/my-stack-as-a-magento-developer/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/phpstorm/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/post/</loc>
@@ -26,11 +38,17 @@
     <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/tags/docker/</loc>
-    <lastmod>2020-02-01T02:00:00+00:00</lastmod>
+    <loc>https://www.avramescu.net/tags/vscode/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/tags/phpstorm/</loc>
-    <lastmod>2020-02-01T02:00:00+00:00</lastmod>
+    <loc>https://www.avramescu.net/tags/xdebug/</loc>
+    <lastmod>2025-01-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/magekube/</loc>
+    <lastmod>2024-12-02T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/</loc>
+    <lastmod>2024-12-02T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/woocommerce/</loc>
     <lastmod>2020-02-01T02:00:00+00:00</lastmod>
@@ -45,9 +63,6 @@
     <lastmod>2020-02-01T02:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/x2go/</loc>
-    <lastmod>2020-02-01T02:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/xdebug/</loc>
     <lastmod>2020-02-01T02:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/working-on-remote-server-locally/</loc>

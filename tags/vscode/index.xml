@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vscode on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/vscode/</link>
+    <description>Recent content in vscode on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Stack as a Magento Developer</title>
+      <link>https://www.avramescu.net/my-stack-as-a-magento-developer/</link>
+      <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/my-stack-as-a-magento-developer/</guid>
+      <description>&lt;p&gt;As a Magento developer, having the right tools and technologies at your disposal is crucial for efficient development and deployment. Here’s a look at the stack I use to streamline my workflow and enhance productivity.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
