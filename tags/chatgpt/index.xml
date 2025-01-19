@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>projects on Razvan-Marian Avramescu</title>
-    <link>https://www.avramescu.net/categories/projects/</link>
-    <description>Recent content in projects on Razvan-Marian Avramescu</description>
+    <title>chatgpt on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/chatgpt/</link>
+    <description>Recent content in chatgpt on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enhancing &#34;In Archives&#34; Rails Applications Search Functionality</title>
       <link>https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/</guid>
       <description>&lt;p&gt;In web development, an efficient and user-friendly search function is essential for a good user experience. While working on the &amp;ldquo;In Archives&amp;rdquo; project, I initially cached the dataset without pagination, which led to poor performance—eight times worse than expected—because pagination was applied to the entire cached dataset.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sneak peak intreaba.net (#RoR, #elasticsearch)</title>
-      <link>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</link>
-      <pubDate>Thu, 31 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/sneak-peak-intreaba-net-ror-elasticsearch/</guid>
-      <description>&lt;p&gt;A new simplified way of adding a question and getting answers. First project will be launch only in romanian and will be build with #RoR, will have facebook authentification, #elasticsearch autocomplete, #bootstrap responsive theme.&lt;/p&gt;</description>
     </item>
     
   </channel>
