@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.avramescu.net/categories/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/nostr/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/post/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/projects/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/rails/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/</loc>
+    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/chatgpt/</loc>
     <lastmod>2025-01-19T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/post/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/categories/projects/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/rails/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/</loc>
-    <lastmod>2025-01-19T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-01-19T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/ddev/</loc>

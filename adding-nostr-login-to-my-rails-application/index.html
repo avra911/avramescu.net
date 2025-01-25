@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Razvan Avramescu">
+<meta name="keywords" content="">
+<meta name="description" content="In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.">
+
+
+<meta property="og:description" content="In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adding Nostr Login to My Rails Application">
+<meta name="twitter:title" content="Adding Nostr Login to My Rails Application">
+<meta property="og:url" content="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+<meta property="twitter:url" content="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+<meta property="og:site_name" content="Razvan-Marian Avramescu">
+<meta property="og:description" content="In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.">
+<meta name="twitter:description" content="In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2025-01-25T10:00:00">
+  
+  
+    <meta property="article:modified_time" content="2025-01-25T10:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="projects">
+    
+  
+  
+    
+      <meta property="article:tag" content="rails">
+    
+      <meta property="article:tag" content="nostr">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+
+
+    <title>Adding Nostr Login to My Rails Application</title>
+
+    <link rel="icon" href="https://www.avramescu.net/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-148354567-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.avramescu.net/">Razvan-Marian Avramescu</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.avramescu.net/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://www.avramescu.net/">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Razvan Avramescu</h4>
+        
+          <h5 class="sidebar-profile-bio">I am a father, a husband, a developer and occasionally cyclist.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Adding Nostr Login to My Rails Application
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2025-01-25T10:00:00Z">
+        
+  January 25, 2025
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/projects">projects</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.</p>
+<h2 id="overview">Overview</h2>
+<p>Nostr is a decentralized protocol that allows users to authenticate without relying on traditional email/password combinations. By leveraging the Nos2x extension, I was able to implement Nostr login seamlessly. Here’s how I did it.</p>
+<h2 id="step-1-adding-asynchronous-nostr-client-in-ruby">Step 1: Adding Asynchronous Nostr client in Ruby</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bundle add nostr
+</code></pre></div><h2 id="step-2-modifying-the-devise-user-model">Step 2: Modifying the Devise User Model</h2>
+<p>The first step was to modify the Devise User model to allow empty email validation. This is crucial because Nostr users may not have an email address. I updated the <code>User</code> model as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationRecord</span>
+  <span style="color:#75715e"># Include default devise modules. Others available are:</span>
+  <span style="color:#75715e"># :confirmable, :lockable, :timeoutable, :trackable, :registerable and :omniauthable</span>
+  devise <span style="color:#e6db74">:database_authenticatable</span>, <span style="color:#e6db74">:registerable</span>,
+         <span style="color:#e6db74">:recoverable</span>, <span style="color:#e6db74">:rememberable</span> <span style="color:#75715e"># Removed :validatable</span>
+
+  <span style="color:#75715e"># Validations</span>
+  validates <span style="color:#e6db74">:nostr_public_key</span>, <span style="color:#e6db74">presence</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">uniqueness</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">allow_blank</span>: <span style="color:#66d9ef">true</span>
+  validates <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">uniqueness</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">allow_blank</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Make email optional</span>
+  validates <span style="color:#e6db74">:password</span>, <span style="color:#e6db74">length</span>: { <span style="color:#e6db74">minimum</span>: <span style="color:#ae81ff">6</span> }, <span style="color:#e6db74">allow_blank</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Make password optional but enforce length if provided</span>
+
+  <span style="color:#75715e"># Conditional validation for email</span>
+  validates <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">presence</span>: <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">unless</span>: <span style="color:#e6db74">:nostr_public_key_present?</span>
+
+  <span style="color:#66d9ef">private</span>
+
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nostr_public_key_present?</span>
+    nostr_public_key<span style="color:#f92672">.</span>present?
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>By adding this validation, I ensured that users logging in via Nostr would not be required to provide an email address.</p>
+<h2 id="step-3-adding-a-new-route-for-nostr-users">Step 3: Adding a New Route for Nostr Users</h2>
+<p>Next, I needed to create a new route to handle the login process for Nostr users. I added the following route to my <code>config/routes.rb</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Rails</span><span style="color:#f92672">.</span>application<span style="color:#f92672">.</span>routes<span style="color:#f92672">.</span>draw <span style="color:#66d9ef">do</span>
+  <span style="color:#75715e"># Other existing routes...</span>
+
+  post <span style="color:#e6db74">&#39;users/nostr_login&#39;</span>, <span style="color:#e6db74">to</span>: <span style="color:#e6db74">&#39;users#nostr_login&#39;</span>, <span style="color:#e6db74">as</span>: <span style="color:#e6db74">&#39;nostr_login&#39;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>This route points to a new action in the <code>UsersController</code> that will manage the authentication process for Nostr users.</p>
+<h2 id="step-4-implementing-the-nostr-login-action">Step 4: Implementing the Nostr Login Action</h2>
+<p>In the <code>UsersController</code>, I implemented the <code>nostr_signup</code> action to handle the login logic:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UsersController</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">ApplicationController</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nostr_signup</span>
+    nostr_signed_event <span style="color:#f92672">=</span> params<span style="color:#f92672">[</span><span style="color:#e6db74">:signed_event</span><span style="color:#f92672">]</span>
+    public_key <span style="color:#f92672">=</span> nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:pubkey</span><span style="color:#f92672">]</span>
+
+    <span style="color:#66d9ef">if</span> nostr_signed_event
+      nostr_event <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nostr</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Event</span><span style="color:#f92672">.</span>new(
+        <span style="color:#e6db74">content</span>: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:content</span><span style="color:#f92672">]</span>,
+        id: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:id</span><span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">created_at</span>: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:created_at</span><span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">kind</span>: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:kind</span><span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">pubkey</span>: public_key,
+        <span style="color:#e6db74">sig</span>: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:sig</span><span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">tags</span>: nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:tags</span><span style="color:#f92672">]</span>
+      )
+
+      <span style="color:#75715e"># Validate the event&#39;s signature</span>
+      <span style="color:#66d9ef">unless</span> nostr_event<span style="color:#f92672">.</span>verify_signature
+        render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">error</span>: <span style="color:#e6db74">&#34;Invalid event signature.&#34;</span> }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+        <span style="color:#66d9ef">return</span>
+      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">else</span>
+      render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">error</span>: <span style="color:#e6db74">&#34;No signed event provided.&#34;</span> }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
+      <span style="color:#66d9ef">return</span>
+    <span style="color:#66d9ef">end</span>
+
+    user <span style="color:#f92672">=</span> <span style="color:#66d9ef">User</span><span style="color:#f92672">.</span>find_or_initialize_by(<span style="color:#e6db74">nostr_public_key</span>: public_key)
+    <span style="color:#f92672">...</span>
+  <span style="color:#66d9ef">end</span>
+
+  <span style="color:#66d9ef">private</span>
+
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">nostr_signup_params</span>
+    params<span style="color:#f92672">.</span>permit(<span style="color:#e6db74">signed_event</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">:id</span>, <span style="color:#e6db74">:kind</span>, <span style="color:#e6db74">:content</span>, <span style="color:#e6db74">:tags</span>, <span style="color:#e6db74">:created_at</span>, <span style="color:#e6db74">:pubkey</span>, <span style="color:#e6db74">:sig</span><span style="color:#f92672">]</span>)
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>This action will handle the authentication process and create a new user if they do not already exist.</p>
+<h2 id="step-5-integrating-javascript-for-nostr-login">Step 5: Integrating JavaScript for Nostr Login</h2>
+<p>To enhance the user experience, I added a link for Nostr login on the Devise login page. I included the following JavaScript code to handle the Nostr login process:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;turbo:load&#34;</span>, <span style="color:#66d9ef">function</span> () {
+  document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;nostr-signup&#34;</span>) {
+      <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+      <span style="color:#a6e22e">nostrSignupHandler</span>();
+    }
+  });
+});
+
+<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">nostrSignupHandler</span>() {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">nostr</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">typeof</span> window.<span style="color:#a6e22e">nostr</span>.<span style="color:#a6e22e">getPublicKey</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;function&#39;</span>) {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicKey</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> window.<span style="color:#a6e22e">nostr</span>.<span style="color:#a6e22e">getPublicKey</span>();
+
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> {
+          <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+          <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Hello, Nostr!&#34;</span>,
+          <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [],
+          <span style="color:#a6e22e">created_at</span><span style="color:#f92672">:</span> Math.<span style="color:#a6e22e">floor</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>),
+          <span style="color:#a6e22e">pubkey</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">publicKey</span>
+      };
+
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">publicKey</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Sign-up failed. No public key.&#34;</span>);
+      }
+
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">signedEvent</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> window.<span style="color:#a6e22e">nostr</span>.<span style="color:#a6e22e">signEvent</span>(<span style="color:#a6e22e">event</span>);
+
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">signedEvent</span>) {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Sign-up failed. Event not signed.&#34;</span>);
+      }
+
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;/nostr_signup&#34;</span>, {
+        <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;POST&#34;</span>,
+        <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;Content-Type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;application/json&#34;</span>,
+          <span style="color:#e6db74">&#34;X-CSRF-Token&#34;</span><span style="color:#f92672">:</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;meta[name=&#34;csrf-token&#34;]&#39;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;content&#34;</span>),
+        },
+        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>({ <span style="color:#e6db74">&#34;signed_event&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">signedEvent</span> }),
+      });
+      ...
+</code></pre></div><p>I also added a button in the Devise shared links partial to trigger the Nostr login:</p>
+<pre><code class="language-erb" data-lang="erb">&lt;%= link_to 'Login with Nostr', '#', id: 'nostr-login-button' %&gt;
+</code></pre><h2 id="conclusion">Conclusion</h2>
+<p>By following these steps, I successfully integrated Nostr login functionality into my Rails application using the Nos2x extension. This not only enhances the user experience by providing a decentralized login option but also aligns with modern authentication practices.</p>
+<p>Feel free to reach out if you have any questions or need further assistance with implementing Nostr login in your own applications!</p>
+<p>Happy coding!</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/rails/">rails</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/nostr/">nostr</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/" data-tooltip="Enhancing &#34;In Archives&#34; Rails Applications Search Functionality">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2025 Razvan Avramescu. Gorgeous theme by <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme">Thibaud Leprêtre</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/" data-tooltip="Enhancing &#34;In Archives&#34; Rails Applications Search Functionality">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.avramescu.net%2Fadding-nostr-login-to-my-rails-application%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.avramescu.net%2Fadding-nostr-login-to-my-rails-application%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.avramescu.net%2Fadding-nostr-login-to-my-rails-application%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Razvan Avramescu</h4>
+    
+      <div id="about-card-bio">I am a father, a husband, a developer and occasionally cyclist.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Toptal Developer, Magekube Founder
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Bucharest, Romania
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/avra911/image/upload/c_scale,q_70,w_1200/v1569606981/avramescu.net/images/cover-avramescu-net.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://www.avramescu.net/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.avramescu.net\/adding-nostr-login-to-my-rails-application\/';
+          
+            this.page.identifier = '\/adding-nostr-login-to-my-rails-application\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'avramescu-net';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

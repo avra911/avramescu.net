@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nostr on Razvan-Marian Avramescu</title>
+    <link>https://www.avramescu.net/tags/nostr/</link>
+    <description>Recent content in nostr on Razvan-Marian Avramescu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/nostr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Nostr Login to My Rails Application</title>
+      <link>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</link>
+      <pubDate>Sat, 25 Jan 2025 10:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</guid>
+      <description>&lt;p&gt;In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

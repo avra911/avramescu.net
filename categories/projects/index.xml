@@ -6,7 +6,16 @@
     <description>Recent content in projects on Razvan-Marian Avramescu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jan 2025 10:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Nostr Login to My Rails Application</title>
+      <link>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</link>
+      <pubDate>Sat, 25 Jan 2025 10:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</guid>
+      <description>&lt;p&gt;In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Enhancing &#34;In Archives&#34; Rails Applications Search Functionality</title>
       <link>https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/</link>
