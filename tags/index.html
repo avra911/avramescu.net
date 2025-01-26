@@ -2,10 +2,30 @@
 <html lang="en-us">
   <head>
     
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/www.avramescu.net\/",
+  "author": {
+    "@type": "Person",
+    "name": "Razvan Avramescu",
+    
+    "image": "https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad"
+    
+  },
+  "name":"Razvan-Marian Avramescu",
+  "description":"Memoires of a developer",
+  "url":"https:\/\/www.avramescu.net\/tags\/",
+  "keywords":"[]"
+}
+
+</script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.5.1-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="Memoires of a developer">
@@ -31,12 +51,12 @@
 
 
 
-
-
-
-
   <meta property="og:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+
+
+
+
 
 
     <title>Tags</title>
@@ -51,17 +71,13 @@
     <link rel="canonical" href="https://www.avramescu.net/tags/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
-    <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    <link rel="stylesheet" href="https://www.avramescu.net/css/style-chfakmiiydj3ocrhl1vyhgzlyhpeocbzohmrm0t1eekygzlpr3qzcfy18h.min.css" />
     
-
-    
-      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -79,7 +95,77 @@ if (!doNotTrack) {
 }
 </script>
     
+
     
+
+    
+    <script>
+    function setTheme(themeName) {
+        if(themeName === 'dark') {
+            document.documentElement.classList.remove('theme--light');
+            document.documentElement.classList.add('theme--dark');
+        }
+        else {
+            document.documentElement.classList.remove('theme--dark');
+            document.documentElement.classList.add('theme--light');
+        }
+
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+
+    var currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    
+    if (currentTheme) {
+        if (currentTheme === 'dark') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+    else {
+        
+        if (window.matchMedia("(prefers-color-scheme: dark)")){
+            setTheme('dark');
+        }
+        else if (window.matchMedia("(prefers-color-scheme: light)")){
+            setTheme('light');
+        }
+        else {
+            
+            setTheme('dark');
+        }
+    }
+
+    var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var mqLight = window.matchMedia('(prefers-color-scheme: light)');
+    
+    function checkTheme(event) {
+        if (event.matches) {
+            if (event.media.includes('dark')) {
+                setTheme('dark');
+                document.getElementById('slider').checked = false;
+            }
+            if (event.media.includes('light')) {
+                setTheme('light');
+                document.getElementById('slider').checked = true;
+            }
+        }
+    }
+    
+    try {
+      mqDark.addEventListener('change', checkTheme);
+      mqLight.addEventListener('change', checkTheme);
+    } catch (maybeSafari) {
+      try {
+        mqDark.addListener(checkTheme);
+        mqLight.addListener(checkTheme);
+      } catch (dontknow) {
+        
+      }
+    }
+</script>
   </head>
 
   <body>
@@ -87,12 +173,12 @@ if (!doNotTrack) {
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://www.avramescu.net/">Razvan-Marian Avramescu</a>
+    <a class="header-title-link" href="https://www.avramescu.net/" aria-label="Go to homepage">Razvan-Marian Avramescu</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://www.avramescu.net/#about">
+         href="https://www.avramescu.net/#about" aria-label="Open the link: /#about">
     
     
     
@@ -108,12 +194,18 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://www.avramescu.net/">
+        <a class="sidebar-image-link" href="https://www.avramescu.net/">
           <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Razvan Avramescu</h4>
         
           <h5 class="sidebar-profile-bio">I am a father, a husband, a developer and occasionally cyclist.</h5>
+        
+        
+          <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider" aria-label="Switch between Dark and Light mode">
+    <span class="slider round"></span>
+</label>
         
       </div>
     
@@ -121,7 +213,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/" title="Home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -131,7 +223,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/categories">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/categories" title="Categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -141,7 +233,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/tags">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/tags" title="Tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -151,7 +243,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/archives">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/archives" title="Archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -165,7 +257,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -175,7 +267,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener" title="Linkedin">
     
       <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
       
@@ -185,7 +277,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/#about">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about" title="About">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -195,7 +287,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
       
@@ -207,8 +299,8 @@ if (!doNotTrack) {
     </ul>
     <ul class="sidebar-buttons">
       
-
-    </ul>
+      
+    </ul>    
   </div>
 </nav>
 
@@ -1059,7 +1151,7 @@ if (!doNotTrack) {
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fa fa-times"></i>
     </div>
     
       <img id="about-card-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
@@ -1077,7 +1169,7 @@ if (!doNotTrack) {
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker-alt"></i>
         <br/>
         Bucharest, Romania
       </div>
@@ -1093,30 +1185,17 @@ if (!doNotTrack) {
 
   </body>
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-
-
-<script src="https://www.avramescu.net/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
-</script>
+
+<script src="https://www.avramescu.net/js/script-yacuutxfvt1eujntvbzebtp3wsud1vohvqlhycduoqw63cdrjpjvhfdasa.min.js"></script>
+
+
 
 <script>
 $(document).ready(function() {

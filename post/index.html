@@ -2,10 +2,30 @@
 <html lang="en-us">
   <head>
     
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/www.avramescu.net\/",
+  "author": {
+    "@type": "Person",
+    "name": "Razvan Avramescu",
+    
+    "image": "https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad"
+    
+  },
+  "name":"Razvan-Marian Avramescu",
+  "description":"Memoires of a developer",
+  "url":"https:\/\/www.avramescu.net\/post\/",
+  "keywords":"[]"
+}
+
+</script>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.5.1-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
 <meta name="description" content="Memoires of a developer">
@@ -31,12 +51,12 @@
 
 
 
-
-
-
-
   <meta property="og:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+
+
+
+
 
 
     <title>Posts</title>
@@ -51,17 +71,13 @@
     <link rel="canonical" href="https://www.avramescu.net/post/">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
-    <link rel="stylesheet" href="https://www.avramescu.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    <link rel="stylesheet" href="https://www.avramescu.net/css/style-chfakmiiydj3ocrhl1vyhgzlyhpeocbzohmrm0t1eekygzlpr3qzcfy18h.min.css" />
     
-
-    
-      <script data-ad-client="ca-pub-7307726473725089" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     
 
     
@@ -79,7 +95,77 @@ if (!doNotTrack) {
 }
 </script>
     
+
     
+
+    
+    <script>
+    function setTheme(themeName) {
+        if(themeName === 'dark') {
+            document.documentElement.classList.remove('theme--light');
+            document.documentElement.classList.add('theme--dark');
+        }
+        else {
+            document.documentElement.classList.remove('theme--dark');
+            document.documentElement.classList.add('theme--light');
+        }
+
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+
+    var currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    
+    if (currentTheme) {
+        if (currentTheme === 'dark') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+    else {
+        
+        if (window.matchMedia("(prefers-color-scheme: dark)")){
+            setTheme('dark');
+        }
+        else if (window.matchMedia("(prefers-color-scheme: light)")){
+            setTheme('light');
+        }
+        else {
+            
+            setTheme('dark');
+        }
+    }
+
+    var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var mqLight = window.matchMedia('(prefers-color-scheme: light)');
+    
+    function checkTheme(event) {
+        if (event.matches) {
+            if (event.media.includes('dark')) {
+                setTheme('dark');
+                document.getElementById('slider').checked = false;
+            }
+            if (event.media.includes('light')) {
+                setTheme('light');
+                document.getElementById('slider').checked = true;
+            }
+        }
+    }
+    
+    try {
+      mqDark.addEventListener('change', checkTheme);
+      mqLight.addEventListener('change', checkTheme);
+    } catch (maybeSafari) {
+      try {
+        mqDark.addListener(checkTheme);
+        mqLight.addListener(checkTheme);
+      } catch (dontknow) {
+        
+      }
+    }
+</script>
   </head>
 
   <body>
@@ -87,12 +173,12 @@ if (!doNotTrack) {
       <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://www.avramescu.net/">Razvan-Marian Avramescu</a>
+    <a class="header-title-link" href="https://www.avramescu.net/" aria-label="Go to homepage">Razvan-Marian Avramescu</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://www.avramescu.net/#about">
+         href="https://www.avramescu.net/#about" aria-label="Open the link: /#about">
     
     
     
@@ -108,12 +194,18 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://www.avramescu.net/">
+        <a class="sidebar-image-link" href="https://www.avramescu.net/">
           <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">Razvan Avramescu</h4>
         
           <h5 class="sidebar-profile-bio">I am a father, a husband, a developer and occasionally cyclist.</h5>
+        
+        
+          <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider" aria-label="Switch between Dark and Light mode">
+    <span class="slider round"></span>
+</label>
         
       </div>
     
@@ -121,7 +213,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/" title="Home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -131,7 +223,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/categories">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/categories" title="Categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -141,7 +233,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/tags">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/tags" title="Tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -151,7 +243,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/archives">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/archives" title="Archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -165,7 +257,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -175,7 +267,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener" title="Linkedin">
     
       <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
       
@@ -185,7 +277,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/#about">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about" title="About">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -195,7 +287,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml">
+      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml" title="RSS">
     
       <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
       
@@ -207,8 +299,8 @@ if (!doNotTrack) {
     </ul>
     <ul class="sidebar-buttons">
       
-
-    </ul>
+      
+    </ul>    
   </div>
 </nav>
 
@@ -234,19 +326,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/" aria-label="Open the post: Adding Nostr Login to My Rails Application">
+      
           Adding Nostr Login to My Rails Application
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2025-01-25T10:00:00Z">
+      <time datetime="2025-01-25T10:00:00Z">
         
   January 25, 2025
 
@@ -264,12 +358,14 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>In this blog post, I will walk you through the process of integrating Nostr login functionality into my Rails application using the Nos2x extension. This involved modifying the Devise User model, adding a new route to handle Nostr users, and integrating JavaScript to enhance the login experience.</p>
       
       <p>
-        <a href="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/adding-nostr-login-to-my-rails-application/" class="postShorten-excerpt_link link" aria-label="Open the post: Adding Nostr Login to My Rails Application">Continue reading</a>
+        
         
       </p>
     </div>
@@ -290,19 +386,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/" aria-label="Open the post: Enhancing &#34;In Archives&#34; Rails Applications Search Functionality">
+      
           Enhancing &#34;In Archives&#34; Rails Applications Search Functionality
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2025-01-19T10:00:00Z">
+      <time datetime="2025-01-19T10:00:00Z">
         
   January 19, 2025
 
@@ -320,12 +418,14 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>In web development, an efficient and user-friendly search function is essential for a good user experience. While working on the &ldquo;In Archives&rdquo; project, I initially cached the dataset without pagination, which led to poor performance—eight times worse than expected—because pagination was applied to the entire cached dataset.</p>
       
       <p>
-        <a href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/enhancing-in-archives-rails-applications-search-functionality/" class="postShorten-excerpt_link link" aria-label="Open the post: Enhancing &#34;In Archives&#34; Rails Applications Search Functionality">Continue reading</a>
+        
         
       </p>
     </div>
@@ -346,19 +446,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/my-stack-as-a-magento-developer/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/my-stack-as-a-magento-developer/" aria-label="Open the post: My Stack as a Magento Developer">
+      
           My Stack as a Magento Developer
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2025-01-06T10:00:00Z">
+      <time datetime="2025-01-06T10:00:00Z">
         
   January 6, 2025
 
@@ -376,12 +478,14 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>As a Magento developer, having the right tools and technologies at your disposal is crucial for efficient development and deployment. Here’s a look at the stack I use to streamline my workflow and enhance productivity.</p>
       
       <p>
-        <a href="https://www.avramescu.net/my-stack-as-a-magento-developer/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/my-stack-as-a-magento-developer/" class="postShorten-excerpt_link link" aria-label="Open the post: My Stack as a Magento Developer">Continue reading</a>
+        
         
       </p>
     </div>
@@ -402,19 +506,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/" aria-label="Open the post: Magekube is Back in Business - Your Magento Expert Is Here!">
+      
           Magekube is Back in Business - Your Magento Expert Is Here!
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2024-12-02T10:00:00Z">
+      <time datetime="2024-12-02T10:00:00Z">
         
   December 2, 2024
 
@@ -432,12 +538,14 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>I am excited to announce that <strong>Magekube</strong> is back in business! After a brief hiatus, I am reopening the doors and ready to provide the same expert Magento services that you have come to know and trust.</p>
       
       <p>
-        <a href="https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/magekube-is-back-in-business-your-magento-expert-is-here/" class="postShorten-excerpt_link link" aria-label="Open the post: Magekube is Back in Business - Your Magento Expert Is Here!">Continue reading</a>
+        
         
       </p>
     </div>
@@ -458,19 +566,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/" aria-label="Open the post: WooCommerce vs Magento - What’s Better for Your Business in 2020?">
+      
           WooCommerce vs Magento - What’s Better for Your Business in 2020?
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-02-01T02:00:00Z">
+      <time datetime="2020-02-01T02:00:00Z">
         
   February 1, 2020
 
@@ -490,13 +600,15 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p><strong>WooCommerce</strong> and <strong>Magento</strong> proudly stand as two of the most popular e-commerce solutions that power jointly nearly 40% of all e-stores on the web. While both have their strengths and weaknesses, it becomes quite challenging for a merchant to choose the best one amongst the two.</p>
 <p>This article is aimed to help you give the answer to an ultimate question: <em>What&rsquo;s better for your business?</em></p>
       
       <p>
-        <a href="https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/woocommerce-vs-magento-whats-better-for-your-business-in-2020/" class="postShorten-excerpt_link link" aria-label="Open the post: WooCommerce vs Magento - What’s Better for Your Business in 2020?">Continue reading</a>
+        
         
       </p>
     </div>
@@ -517,19 +629,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/working-on-remote-server-locally/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/working-on-remote-server-locally/" aria-label="Open the post: Working on remote server locally">
+      
           Working on remote server locally
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-01-30T02:00:00Z">
+      <time datetime="2018-01-30T02:00:00Z">
         
   January 30, 2018
 
@@ -547,13 +661,15 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>This could sound weird, but should be strong as <em>think global, act local</em>: <strong>work on remote server</strong>, locally.</p>
 <p>Many programmers are using Mac, while some other developers are taking advantages of Linux latest technologies (such as Docker). Other people are just so old school, they still using the Microsoft and we have to respect that, if that works (and it should actually).</p>
       
       <p>
-        <a href="https://www.avramescu.net/working-on-remote-server-locally/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/working-on-remote-server-locally/" class="postShorten-excerpt_link link" aria-label="Open the post: Working on remote server locally">Continue reading</a>
+        
         
       </p>
     </div>
@@ -574,19 +690,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/meet-magento-2017-romania/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/meet-magento-2017-romania/" aria-label="Open the post: Meet Magento 2017 Romania">
+      
           Meet Magento 2017 Romania
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-01-30T01:00:00Z">
+      <time datetime="2018-01-30T01:00:00Z">
         
   January 30, 2018
 
@@ -604,14 +722,16 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>This year I was excited and honoured to have a workshop at Meet Magento 2017 Romania on October 17th.</p>
 <p>From the arrival, the venue Grand Hotel Italia was great and we were very warm welcome, especially after a longer flight time because of the weather conditions (more precisely the airport was closed due to an intense fog and the airplane had to make circles in the air for about one hour).</p>
 <p>The organisers did a really great job and they switched my speech. Ben Marks cooled me down with a bottle of water, which proved more than useful for my emotions which I usually have when I present in public.</p>
       
       <p>
-        <a href="https://www.avramescu.net/meet-magento-2017-romania/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/meet-magento-2017-romania/" class="postShorten-excerpt_link link" aria-label="Open the post: Meet Magento 2017 Romania">Continue reading</a>
+        
         
       </p>
     </div>
@@ -632,19 +752,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/" aria-label="Open the post: My first speech – Meet Magento 2017 Sweden">
+      
           My first speech – Meet Magento 2017 Sweden
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-07-01T00:00:00Z">
+      <time datetime="2017-07-01T00:00:00Z">
         
   July 1, 2017
 
@@ -662,13 +784,15 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>Nordic Web Team organised Meet Magento 2017 Sweden for the second time, in Stockholm. The event toked place in Münchenbryggeriet (or the “Brewery Conference Center”).</p>
 <p>After being in the panel moderator a year ago, this time I had the pleasure to talk on my first public presentation, which Nexcess described it being &ldquo;<em>a particularly interesting talk about Kubernetes and Magento 2</em>&rdquo;.</p>
       
       <p>
-        <a href="https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/my-first-speech-meet-magento-2017-sweden/" class="postShorten-excerpt_link link" aria-label="Open the post: My first speech – Meet Magento 2017 Sweden">Continue reading</a>
+        
         
       </p>
     </div>
@@ -689,19 +813,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/" aria-label="Open the post: Insides about migrating Magento 1.x to Magento 2.x">
+      
           Insides about migrating Magento 1.x to Magento 2.x
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-04-18T00:00:00Z">
+      <time datetime="2017-04-18T00:00:00Z">
         
   April 18, 2017
 
@@ -719,13 +845,15 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>Migrating from Magento 1.x to Magento 2.x can be seen as a long and complex process, especially when having many custom extensions. It involves the data, the extensions, the themes and all the customisations.</p>
 <p>To avoid additional issues is recommended to start first with the migration on a fresh Magento 2.x installation (using DevBox), which will bring all the settings, products, categories, cms pages, blocks, orders, url rewrites and customers. If it starts with the design, the changes (pages and settings) will be overwritten by the official data migration tool and might cost some time to add them back. Changes made during theme design might enter in conflict with the migration tool (for example creating new attributes, which will be time consuming to debug).</p>
       
       <p>
-        <a href="https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/insides-about-migrating-magento-1-x-to-magento-2-x/" class="postShorten-excerpt_link link" aria-label="Open the post: Insides about migrating Magento 1.x to Magento 2.x">Continue reading</a>
+        
         
       </p>
     </div>
@@ -746,19 +874,21 @@ if (!doNotTrack) {
 
   
 
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+<article class="postShorten postShorten--thumbnailimg-bottom">
   <div class="postShorten-wrap">
     
     <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.avramescu.net/first-impression-about-kubernetes/">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/first-impression-about-kubernetes/" aria-label="Open the post: First impression about Kubernetes">
+      
           First impression about Kubernetes
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-04-08T00:00:00Z">
+      <time datetime="2017-04-08T00:00:00Z">
         
   April 8, 2017
 
@@ -776,13 +906,15 @@ if (!doNotTrack) {
   </div>
 
     </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
+    <div class="postShorten-excerpt">
       
         <p>With some experience on docker-compose, Kubernetes seems very stable, quick and reliable solution for the need of pushing a Magento 2.x project into the cloud.</p>
 <p>There are also alternatives such as docker swarm (which has a more gengle learning curve when having docker-compose background). Willing to test multiple solutions, Kubernetes does not disappoint when doing the translation from local project into the cloud.</p>
       
       <p>
-        <a href="https://www.avramescu.net/first-impression-about-kubernetes/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+          <a href="https://www.avramescu.net/first-impression-about-kubernetes/" class="postShorten-excerpt_link link" aria-label="Open the post: First impression about Kubernetes">Continue reading</a>
+        
         
       </p>
     </div>
@@ -798,7 +930,7 @@ if (!doNotTrack) {
         
         
           <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://www.avramescu.net/post/page/2/">
+            <a class="btn btn--default btn--small" href="https://www.avramescu.net/post/page/2/" aria-label="OLDER POSTS">
               <span>OLDER POSTS</span>
               <i class="fa fa-angle-right text-base icon-ml"></i>
             </a>
@@ -823,7 +955,7 @@ if (!doNotTrack) {
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fa fa-times"></i>
     </div>
     
       <img id="about-card-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
@@ -841,7 +973,7 @@ if (!doNotTrack) {
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker-alt"></i>
         <br/>
         Bucharest, Romania
       </div>
@@ -858,30 +990,17 @@ if (!doNotTrack) {
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-
-
-<script src="https://www.avramescu.net/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
-</script>
+
+<script src="https://www.avramescu.net/js/script-yacuutxfvt1eujntvbzebtp3wsud1vohvqlhycduoqw63cdrjpjvhfdasa.min.js"></script>
+
+
 
 <script>
 $(document).ready(function() {
