@@ -455,7 +455,7 @@ if (!doNotTrack) {
 <h2 id="step-5-integrating-javascript-for-nostr-login">Step 5: Integrating JavaScript for Nostr Login</h2>
 <p>To enhance the user experience, I added a link for Nostr login on the Devise login page. I included the following JavaScript code to handle the Nostr login process:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;turbo:load&#34;</span>, <span style="color:#66d9ef">function</span> () {
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isNostrAvailable</span>()) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isNostrAvailable</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;nostr-signup&#39;</span>)) {
     <span style="color:#a6e22e">createNostrSignupButton</span>();
     <span style="color:#a6e22e">addClickListener</span>();
   }
