@@ -379,8 +379,9 @@ if (!doNotTrack) {
   validates <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">uniqueness</span>: <span style="color:#66d9ef">true</span>, <span style="color:#e6db74">allow_blank</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Make email optional</span>
   validates <span style="color:#e6db74">:password</span>, <span style="color:#e6db74">length</span>: { <span style="color:#e6db74">minimum</span>: <span style="color:#ae81ff">6</span> }, <span style="color:#e6db74">allow_blank</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Make password optional but enforce length if provided</span>
 
-  <span style="color:#75715e"># Conditional validation for email</span>
+  <span style="color:#75715e"># Conditional validation for email and password</span>
   validates <span style="color:#e6db74">:email</span>, <span style="color:#e6db74">presence</span>: <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">unless</span>: <span style="color:#e6db74">:nostr_public_key_present?</span>
+  validates <span style="color:#e6db74">:password</span>, <span style="color:#e6db74">presence</span>: <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">unless</span>: <span style="color:#e6db74">:nostr_public_key_present?</span>
 
   <span style="color:#66d9ef">private</span>
 
