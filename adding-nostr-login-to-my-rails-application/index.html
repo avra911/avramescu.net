@@ -457,7 +457,6 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;turbo:load&#34;</span>, <span style="color:#66d9ef">function</span> () {
   <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isNostrAvailable</span>() <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;nostr-signup&#39;</span>)) {
     <span style="color:#a6e22e">createNostrSignupButton</span>();
-    <span style="color:#a6e22e">addClickListener</span>();
   }
 });
 
@@ -468,8 +467,13 @@ if (!doNotTrack) {
 
 <span style="color:#75715e">// Function to create and append the Nostr signup button
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createNostrSignupButton</span>() {
+  <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;button&#39;</span>);
   <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;nostr-signup&#34;</span>;
+  <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+    <span style="color:#a6e22e">nostrSignupHandler</span>();
+  };
   <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;submit&#34;</span>;
   <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;%= t(&#39;nostr.with_extension&#39;) %&gt;&#34;</span>;
 
@@ -479,17 +483,7 @@ if (!doNotTrack) {
   }
 }
 
-<span style="color:#75715e">// Function to add click event listener for the Nostr signup button
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addClickListener</span>() {
-  document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>) {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;nostr-signup&#34;</span>) {
-      <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
-      <span style="color:#a6e22e">nostrSignupHandler</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>);
-    }
-  });
-}
-
-<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">nostrSignupHandler</span>(<span style="color:#a6e22e">target</span>) {
+<span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">nostrSignupHandler</span>() {
   <span style="color:#66d9ef">try</span> {
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">publicKey</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> window.<span style="color:#a6e22e">nostr</span>.<span style="color:#a6e22e">getPublicKey</span>();
 
