@@ -418,9 +418,12 @@ if (!doNotTrack) {
     content <span style="color:#f92672">=</span> nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:content</span><span style="color:#f92672">]</span>
     kind <span style="color:#f92672">=</span> nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:kind</span><span style="color:#f92672">]</span>
     csrf_token <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X-CSRF-Token&#39;</span><span style="color:#f92672">]</span>
+    challenge_value <span style="color:#f92672">=</span> tags<span style="color:#f92672">.</span>find { <span style="color:#f92672">|</span>pair<span style="color:#f92672">|</span> pair<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;challenge&#34;</span> }<span style="color:#f92672">&amp;.</span>last
+    relay_value <span style="color:#f92672">=</span> tags<span style="color:#f92672">.</span>find { <span style="color:#f92672">|</span>pair<span style="color:#f92672">|</span> pair<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;relay&#34;</span> }<span style="color:#f92672">&amp;.</span>last
+    expected_relay_value <span style="color:#f92672">=</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">.</span>fetch(<span style="color:#e6db74">&#39;NOSTR_AUTH_RELAY_URL&#39;</span>, <span style="color:#e6db74">&#39;wss://default.relay.url&#39;</span>)
 
-    <span style="color:#75715e"># Check if the content includes the CSRF token and if the kind is valid</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>content<span style="color:#f92672">.</span>include?(csrf_token) <span style="color:#f92672">||</span> kind <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#75715e"># Check if the challenge_value and relay_value are matching or if kind is valid</span>
+    <span style="color:#66d9ef">if</span> challenge_value <span style="color:#f92672">!=</span> csrf_token <span style="color:#f92672">||</span> kind <span style="color:#f92672">!=</span> <span style="color:#ae81ff">22242</span> <span style="color:#f92672">||</span> relay_value <span style="color:#f92672">!=</span> expected_relay_value
       <span style="color:#66d9ef">return</span> render <span style="color:#e6db74">json</span>: { <span style="color:#e6db74">success</span>: <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">error</span>: <span style="color:#e6db74">&#34;Invalid event provided.&#34;</span> }, <span style="color:#e6db74">status</span>: <span style="color:#e6db74">:unprocessable_entity</span>
     <span style="color:#66d9ef">end</span>
 
@@ -494,11 +497,20 @@ if (!doNotTrack) {
     <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;meta[name=&#34;csrf-token&#34;]&#39;</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
 
     <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> {
-        <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-        <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Greetings from Nostr, In Archives! (CSRF Token: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>,
-        <span style="color:#a6e22e">tags</span><span style="color:#f92672">:</span> [],
-        <span style="color:#a6e22e">created_at</span><span style="color:#f92672">:</span> Math.<span style="color:#a6e22e">floor</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>),
-        <span style="color:#a6e22e">pubkey</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">publicKey</span>
+      <span style="color:#e6db74">&#34;created_at&#34;</span><span style="color:#f92672">:</span> Math.<span style="color:#a6e22e">floor</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>),
+      <span style="color:#e6db74">&#34;content&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#e6db74">&#34;tags&#34;</span><span style="color:#f92672">:</span> [
+        [
+          <span style="color:#e6db74">&#34;relay&#34;</span>,
+          <span style="color:#e6db74">&#34;&lt;%= ENV[&#39;NOSTR_AUTH_RELAY_URL&#39;] || &#39;wss://relay.primal.net&#39; %&gt;&#34;</span>
+        ],
+        [
+          <span style="color:#e6db74">&#34;challenge&#34;</span>,
+          <span style="color:#a6e22e">token</span>
+        ]
+      ],
+      <span style="color:#e6db74">&#34;kind&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">22242</span>,
+      <span style="color:#e6db74">&#34;pubkey&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">publicKey</span>
     };
 
     <span style="color:#75715e">// Sign the event
