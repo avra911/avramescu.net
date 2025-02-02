@@ -418,8 +418,9 @@ if (!doNotTrack) {
     content <span style="color:#f92672">=</span> nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:content</span><span style="color:#f92672">]</span>
     kind <span style="color:#f92672">=</span> nostr_signed_event<span style="color:#f92672">[</span><span style="color:#e6db74">:kind</span><span style="color:#f92672">]</span>
     csrf_token <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>headers<span style="color:#f92672">[</span><span style="color:#e6db74">&#39;X-CSRF-Token&#39;</span><span style="color:#f92672">]</span>
-    challenge_value <span style="color:#f92672">=</span> tags<span style="color:#f92672">.</span>find { <span style="color:#f92672">|</span>pair<span style="color:#f92672">|</span> pair<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;challenge&#34;</span> }<span style="color:#f92672">&amp;.</span>last
-    relay_value <span style="color:#f92672">=</span> tags<span style="color:#f92672">.</span>find { <span style="color:#f92672">|</span>pair<span style="color:#f92672">|</span> pair<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;relay&#34;</span> }<span style="color:#f92672">&amp;.</span>last
+    tags_hash <span style="color:#f92672">=</span> tags<span style="color:#f92672">.</span>to_h
+    challenge_value <span style="color:#f92672">=</span> tags_hash<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;challenge&#34;</span><span style="color:#f92672">]</span>
+    relay_value <span style="color:#f92672">=</span> tags_hash<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;relay&#34;</span><span style="color:#f92672">]</span>
     expected_relay_value <span style="color:#f92672">=</span> <span style="color:#66d9ef">ENV</span><span style="color:#f92672">.</span>fetch(<span style="color:#e6db74">&#39;NOSTR_AUTH_RELAY_URL&#39;</span>, <span style="color:#e6db74">&#39;wss://relay.primal.net&#39;</span>)
 
     <span style="color:#75715e"># Check if the challenge_value and relay_value are matching or if kind is valid</span>
