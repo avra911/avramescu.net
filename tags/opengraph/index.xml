@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>opengraph on Razvan-Marian AVRAMESCU</title>
+    <link>https://www.avramescu.net/tags/opengraph/</link>
+    <description>Recent content in opengraph on Razvan-Marian AVRAMESCU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/opengraph/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Generate Custom OpenGraph Images During Rails Deploys With Python and Ansible</title>
+      <link>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</guid>
+      <description>&lt;p&gt;Most Rails apps do not bother with a custom OpenGraph image. Mine do and they’re generated automatically during deployment using Python, Cairo, and Ansible.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

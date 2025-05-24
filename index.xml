@@ -6,7 +6,16 @@
     <description>Recent content on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Generate Custom OpenGraph Images During Rails Deploys With Python and Ansible</title>
+      <link>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</guid>
+      <description>&lt;p&gt;Most Rails apps do not bother with a custom OpenGraph image. Mine do and they’re generated automatically during deployment using Python, Cairo, and Ansible.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Why I Walked Away From Magento After 10 Years</title>
       <link>https://www.avramescu.net/why-i-walked-away-from-magento-after-10-years/</link>

@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.avramescu.net/tags/ansible/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/automation/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/cairo/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/deployment/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/devops/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/opengraph/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/post/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/python/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/rails/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/</loc>
+    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.avramescu.net/tags/bitcoin/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,9 +56,6 @@
     <loc>https://www.avramescu.net/categories/career/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/categories/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.avramescu.net/categories/development/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,15 +66,6 @@
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/nostr/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/post/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/</loc>
-    <lastmod>2025-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/why-i-walked-away-from-magento-after-10-years/</loc>
