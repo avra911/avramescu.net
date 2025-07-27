@@ -6,7 +6,16 @@
     <description>Recent content on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Fixed Ruby on Rails Hotwire Broadcast for Unpublished Comments to Show Pending Approval for Current User</title>
+      <link>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</link>
+      <pubDate>Sun, 27 Jul 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</guid>
+      <description>&lt;p&gt;In my recent project, I faced a challenge with broadcasting comments in a Ruby on Rails application using Hotwire. The goal was to ensure that unpublished comments would only be visible to the user who created them, while published comments would be visible to everyone. Here’s how I tackled this issue.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>How I Ended Up Choosing the Ford Kuga Over the RAV4 in Romania And Why It Was the Best Value SUV</title>
       <link>https://www.avramescu.net/how-i-ended-up-choosing-the-ford-kuga-over-the-rav4-in-romania-and-why-it-was-the-best-value-suv/</link>

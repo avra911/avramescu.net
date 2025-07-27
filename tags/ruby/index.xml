@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rails on Razvan-Marian AVRAMESCU</title>
-    <link>https://www.avramescu.net/categories/rails/</link>
-    <description>Recent content in rails on Razvan-Marian AVRAMESCU</description>
+    <title>ruby on Razvan-Marian AVRAMESCU</title>
+    <link>https://www.avramescu.net/tags/ruby/</link>
+    <description>Recent content in ruby on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/rails/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I Fixed Ruby on Rails Hotwire Broadcast for Unpublished Comments to Show Pending Approval for Current User</title>
       <link>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</guid>
       <description>&lt;p&gt;In my recent project, I faced a challenge with broadcasting comments in a Ruby on Rails application using Hotwire. The goal was to ensure that unpublished comments would only be visible to the user who created them, while published comments would be visible to everyone. Here’s how I tackled this issue.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How I Generate Custom OpenGraph Images During Rails Deploys With Python and Ansible</title>
-      <link>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</link>
-      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</guid>
-      <description>&lt;p&gt;Most Rails apps do not bother with a custom OpenGraph image. Mine do and they are generated automatically during deployment using Python, Cairo and Ansible.&lt;/p&gt;</description>
     </item>
     
   </channel>

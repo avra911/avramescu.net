@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.avramescu.net/tags/approval/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/broadcast/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/comments/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/hotwire/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/hotwire/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/post/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/programming/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/rails/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/rails/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/ruby/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/ruby/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/</loc>
+    <lastmod>2025-07-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.avramescu.net/tags/auto/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
@@ -9,9 +54,6 @@
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/cars/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/categories/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/europe/</loc>
@@ -26,22 +68,13 @@
     <loc>https://www.avramescu.net/tags/kuga/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/post/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.avramescu.net/tags/rav4/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/romania/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/suv/</loc>
-    <lastmod>2025-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-07-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/value/</loc>
@@ -98,9 +131,6 @@
     <loc>https://www.avramescu.net/tags/python/</loc>
     <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/categories/rails/</loc>
-    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.avramescu.net/tags/burnout/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -144,9 +174,6 @@
     <lastmod>2025-01-25T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/projects/</loc>
-    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/rails/</loc>
     <lastmod>2025-01-25T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/chatgpt/</loc>
