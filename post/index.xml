@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Three Months In – Passing the Probation Period at Onapsis</title>
+      <link>https://www.avramescu.net/three-months-in-passing-the-probation-period-at-onapsis/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/three-months-in-passing-the-probation-period-at-onapsis/</guid>
+      <description>&lt;p&gt;After years of freelancing in eCommerce and backend development, this summer I made a significant career shift: I joined &lt;strong&gt;Onapsis&lt;/strong&gt; as a &lt;strong&gt;Software Engineer III – Python&lt;/strong&gt;. Recently, I passed the three-month probation period.&lt;/p&gt;
+&lt;p&gt;This milestone may look small from the outside, but for me it came with important lessons about &lt;strong&gt;transition, culture and growth&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>How I Fixed Ruby on Rails Hotwire Broadcast for Unpublished Comments to Show Pending Approval for Current User</title>
       <link>https://www.avramescu.net/how-i-fixed-ruby-on-rails-hotwire-broadcast-for-unpublished-comments-to-show-pending-approval-for-current-user/</link>

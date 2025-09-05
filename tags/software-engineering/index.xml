@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>career on Razvan-Marian AVRAMESCU</title>
-    <link>https://www.avramescu.net/categories/career/</link>
-    <description>Recent content in career on Razvan-Marian AVRAMESCU</description>
+    <title>software-engineering on Razvan-Marian AVRAMESCU</title>
+    <link>https://www.avramescu.net/tags/software-engineering/</link>
+    <description>Recent content in software-engineering on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/career/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Three Months In – Passing the Probation Period at Onapsis</title>
       <link>https://www.avramescu.net/three-months-in-passing-the-probation-period-at-onapsis/</link>
@@ -15,15 +15,6 @@
       <guid>https://www.avramescu.net/three-months-in-passing-the-probation-period-at-onapsis/</guid>
       <description>&lt;p&gt;After years of freelancing in eCommerce and backend development, this summer I made a significant career shift: I joined &lt;strong&gt;Onapsis&lt;/strong&gt; as a &lt;strong&gt;Software Engineer III – Python&lt;/strong&gt;. Recently, I passed the three-month probation period.&lt;/p&gt;
 &lt;p&gt;This milestone may look small from the outside, but for me it came with important lessons about &lt;strong&gt;transition, culture and growth&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Why I Walked Away From Magento After 10 Years</title>
-      <link>https://www.avramescu.net/why-i-walked-away-from-magento-after-10-years/</link>
-      <pubDate>Tue, 29 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/why-i-walked-away-from-magento-after-10-years/</guid>
-      <description>&lt;p&gt;After over a decade working with Magento, I decided to walk away - not because I couldn&amp;rsquo;t do it anymore, but because I couldn&amp;rsquo;t stand &lt;em&gt;why&lt;/em&gt; I was doing it anymore.&lt;/p&gt;</description>
     </item>
     
   </channel>
