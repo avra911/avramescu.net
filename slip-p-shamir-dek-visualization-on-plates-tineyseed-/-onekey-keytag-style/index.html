@@ -16,7 +16,7 @@
     
   },
   "name":"Razvan-Marian AVRAMESCU",
-  "description":"\u003cp\u003eSLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a \u003ccode\u003eTinyseed\u003c\/code\u003e \/ \u003ccode\u003eOneKey KeyTag\u003c\/code\u003e - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.\u003c\/p\u003e\n\u003cp\u003eThe idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.\u003c\/p\u003e",
+  "description":"SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey\/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.\nWhy this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.",
   "url":"https:\/\/www.avramescu.net\/slip-p-shamir-dek-visualization-on-plates-tineyseed-\/-onekey-keytag-style\/",
   "keywords":"[]"
 }
@@ -28,22 +28,22 @@
 <meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.5.1-BETA">
 <meta name="author" content="Razvan Avramescu">
 <meta name="keywords" content="">
-<meta name="description" content="SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a Tinyseed / OneKey KeyTag - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.
-The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.">
+<meta name="description" content="SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.
+Why this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.">
 
 
-<meta property="og:description" content="SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a Tinyseed / OneKey KeyTag - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.
-The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.">
+<meta property="og:description" content="SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.
+Why this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SLIP-P - Shamir DEK Visualization on Plates TineySeed / OneKey KeyTag - style">
 <meta name="twitter:title" content="SLIP-P - Shamir DEK Visualization on Plates TineySeed / OneKey KeyTag - style">
 <meta property="og:url" content="https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/">
 <meta property="twitter:url" content="https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/">
 <meta property="og:site_name" content="Razvan-Marian AVRAMESCU">
-<meta property="og:description" content="SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a Tinyseed / OneKey KeyTag - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.
-The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.">
-<meta name="twitter:description" content="SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a Tinyseed / OneKey KeyTag - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.
-The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.">
+<meta property="og:description" content="SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.
+Why this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.">
+<meta name="twitter:description" content="SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.
+Why this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.">
 <meta property="og:locale" content="en-us">
 
   
@@ -390,32 +390,45 @@ if (!doNotTrack) {
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a <code>Tinyseed</code> / <code>OneKey KeyTag</code> - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.</p>
-<p>The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.</p>
-<p>The plates show each bit as a visual mark, grouped in columns representing powers of two and rows for easy human reading. Dynamic checksums ensure integrity during recovery.</p>
-<h3 id="features">Features</h3>
+              <p>SLIP-P is a small, open-source demo that helps you split a data-encryption-key
+(DEK) using Shamir secret sharing and render the resulting shares as
+human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical
+exploration and visual aid for securely storing key shares offline.</p>
+<h2 id="why-this-is-useful">Why this is useful</h2>
 <ul>
-<li>Support for 128, 192, 256-bit DEKs</li>
-<li>Threshold-based Shamir splitting (2-of-3 or configurable)</li>
-<li>Plate visualization in Markdown-friendly format</li>
-<li>Dynamic checksum verification</li>
-<li>Easy recovery from any sufficient set of shares</li>
+<li>If you want to split a master key into multiple physical copies (plates)
+such that any threshold of them can recover the key, SLIP-P shows a simple
+way to do it and to verify shares with a short checksum.</li>
+<li>The plate output is optimized for printing or copying to offline media.</li>
 </ul>
-<h3 id="usage">Usage</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> slip_plate.main <span style="color:#f92672">import</span> main
-
-main()
-</code></pre></div><h3 id="example-usage">Example usage</h3>
-<p>Run the example script with a specific DEK size:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m examples.example_run --dek <span style="color:#ae81ff">256</span> --parts<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> --threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
-</code></pre></div><h3 id="security-model">Security Model</h3>
+<h3 id="try-it-quick-start">Try it (quick start)</h3>
+<ol>
+<li>
+<p>Clone the repo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/avra911/slip-plate.git
+cd slip-plate
+</code></pre></div></li>
+<li>
+<p>Create a virtual environment and install dependencies:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt pytest
+</code></pre></div></li>
+<li>
+<p>Run the demo CLI (prints plates to your terminal):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m slip_plate.cli --dek-size <span style="color:#ae81ff">256</span> --parts <span style="color:#ae81ff">3</span> --threshold <span style="color:#ae81ff">2</span>
+</code></pre></div></li>
+<li>
+<p>Or run the example script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python -m examples.example_run --dek-size <span style="color:#ae81ff">128</span> --parts <span style="color:#ae81ff">3</span> --threshold <span style="color:#ae81ff">2</span>
+</code></pre></div></li>
+</ol>
+<h3 id="what-youll-see">What you&rsquo;ll see</h3>
 <ul>
-<li>Plates are generated once and stored offline</li>
-<li>DEKs are reconstructed from a quorum of shares during encryption or decryption</li>
-<li>Nonces are unique per encryption and embedded in the ciphertext</li>
-<li>No DEK is stored digitally outside memory during use</li>
+<li>An encrypted sample blob (DEK used to encrypt a short message).</li>
+<li>The Shamir shares rendered as plates with a small checksum highlighted -
+suitable for printing or manual transcription.</li>
 </ul>
-<h3 id="example-onekey-style-plate">Example OneKey-style Plate</h3>
 <p>Below is a randomized example output look of a KEK share plate (128-bit DEK, 2-of-3 Shamir):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">===</span> Shares OneKey-style <span style="color:#f92672">===</span>
 
@@ -434,9 +447,26 @@ main()
 <span style="color:#ae81ff">12</span> | ● ● ○ ○ │ ● ● ○ ● │ ● ○ ○ ○ │
     ─────────────────────────────
 </code></pre></div><p>Dots (…) represent truncated rows for brevity.</p>
-<h3 id="source-code">Source code</h3>
-<p>For those who wish to contribute, I have made the full source code available on GitHub:
-<a href="https://github.com/avra911/slip-plate">https://github.com/avra911/slip-plate</a>.</p>
+<h3 id="testing-and-development">Testing and development</h3>
+<ul>
+<li>Run the unit tests with <code>pytest -q</code>.</li>
+<li>The project contains small modules for checksum handling, plate rendering,
+AES-GCM helpers and simple Shamir wrappers - easy to read and extend.</li>
+</ul>
+<h3 id="repository">Repository</h3>
+<ul>
+<li>The full source and examples are available on GitHub: <a href="https://github.com/avra911/slip-plate">https://github.com/avra911/slip-plate</a>.</li>
+</ul>
+<h3 id="notes-and-caveats">Notes and caveats</h3>
+<ul>
+<li>This is a demo / research tool - treat outputs as examples and review the
+code and cryptographic choices before using in production.</li>
+<li>Keep printed plates physically secure; the checksum helps detect transcription
+errors but is not a replacement for proper key management.</li>
+</ul>
+<p>Contributions welcome - open a PR or an issue on the repo if you have
+improvements or questions.</p>
+
               
 
             </div>
