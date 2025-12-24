@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on Razvan-Marian AVRAMESCU</title>
-    <link>https://www.avramescu.net/tags/python/</link>
-    <description>Recent content in python on Razvan-Marian AVRAMESCU</description>
+    <title>security on Razvan-Marian AVRAMESCU</title>
+    <link>https://www.avramescu.net/tags/security/</link>
+    <description>Recent content in security on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SLIP-P - Shamir DEK Visualization on Plates TineySeed / OneKey KeyTag - style</title>
       <link>https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/</link>
@@ -15,15 +15,6 @@
       <guid>https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/</guid>
       <description>&lt;p&gt;SLIP-P is a Python tool that allows visualizing Shamir-split DEKs on plates in a &lt;code&gt;Tinyseed&lt;/code&gt; / &lt;code&gt;OneKey KeyTag&lt;/code&gt; - style layout. It supports 128, 192, and 256-bit DEKs with dynamic checksum.&lt;/p&gt;
 &lt;p&gt;The idea started from traditional mnemonic splitting but was optimized to fit binary shares on physical plates for secure offline storage. Each DEK can be split into multiple shares and any threshold of shares can be used to recover the original DEK.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How I Generate Custom OpenGraph Images During Rails Deploys With Python and Ansible</title>
-      <link>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</link>
-      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/how-i-generate-custom-opengraph-images-during-rails-deploys-with-python-and-ansible/</guid>
-      <description>&lt;p&gt;Most Rails apps do not bother with a custom OpenGraph image. Mine do and they are generated automatically during deployment using Python, Cairo and Ansible.&lt;/p&gt;</description>
     </item>
     
   </channel>

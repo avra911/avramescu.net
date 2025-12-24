@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.avramescu.net/categories/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/cryptography/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/hardware-wallet/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/onekey-keytag-shamir/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/onekey-shamir/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/post/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/projects/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/python/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/security/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/shamir/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/tinyseed-shamir/</loc>
+    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.avramescu.net/tags/bitcoin/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,9 +54,6 @@
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/btc/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/categories/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/charts/</loc>
@@ -33,15 +72,6 @@
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/markets/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/post/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/</loc>
-    <lastmod>2025-10-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-10-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/career/</loc>
@@ -182,9 +212,6 @@
     <loc>https://www.avramescu.net/tags/opengraph/</loc>
     <lastmod>2025-05-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/tags/python/</loc>
-    <lastmod>2025-05-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.avramescu.net/tags/burnout/</loc>
     <lastmod>2025-04-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -222,9 +249,6 @@
     <lastmod>2025-04-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/adding-nostr-login-to-my-rails-application/</loc>
-    <lastmod>2025-01-25T10:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/categories/projects/</loc>
     <lastmod>2025-01-25T10:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/chatgpt/</loc>

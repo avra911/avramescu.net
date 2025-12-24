@@ -6,7 +6,79 @@
     <description>Recent content in Tags on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cryptography</title>
+      <link>https://www.avramescu.net/tags/cryptography/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware-wallet</title>
+      <link>https://www.avramescu.net/tags/hardware-wallet/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/hardware-wallet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onekey-keytag-shamir</title>
+      <link>https://www.avramescu.net/tags/onekey-keytag-shamir/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/onekey-keytag-shamir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onekey-shamir</title>
+      <link>https://www.avramescu.net/tags/onekey-shamir/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/onekey-shamir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.avramescu.net/tags/python/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://www.avramescu.net/tags/security/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shamir</title>
+      <link>https://www.avramescu.net/tags/shamir/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/shamir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tinyseed-shamir</title>
+      <link>https://www.avramescu.net/tags/tinyseed-shamir/</link>
+      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/tinyseed-shamir/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>bitcoin</title>
       <link>https://www.avramescu.net/tags/bitcoin/</link>
@@ -283,15 +355,6 @@
       <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/opengraph/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.avramescu.net/tags/python/</link>
-      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/tags/python/</guid>
       <description></description>
     </item>
     
