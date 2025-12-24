@@ -8,13 +8,14 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SLIP-P - Shamir DEK Visualization on Plates TineySeed / OneKey KeyTag - style</title>
-      <link>https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/</link>
+      <title>SLIP-PLATE - Shamir DEK Visualization on Plates (OneKey/TinySeed Style)</title>
+      <link>https://www.avramescu.net/slip-plate-shamir-dek-visualization-on-plates-onekey/tinyseed-style/</link>
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://www.avramescu.net/slip-p-shamir-dek-visualization-on-plates-tineyseed-/-onekey-keytag-style/</guid>
-      <description>SLIP-P is a small, open-source demo that helps you split a data-encryption-key (DEK) using Shamir secret sharing and render the resulting shares as human-friendly plates (OneKey/Tinyseed-style). It is intended as a practical exploration and visual aid for securely storing key shares offline.
-Why this is useful  If you want to split a master key into multiple physical copies (plates) such that any threshold of them can recover the key, SLIP-P shows a simple way to do it and to verify shares with a short checksum.</description>
+      <guid>https://www.avramescu.net/slip-plate-shamir-dek-visualization-on-plates-onekey/tinyseed-style/</guid>
+      <description>SLIP-PLATE is an open-source security tool that allows you to split a Data Encryption Key (DEK) using Shamir&amp;rsquo;s Secret Sharing and render the resulting shares as human-friendly, physical plates (OneKey/TinySeed style).
+With the recent transition to a PyPI package, the tool is now easier than ever to deploy and use for secure offline key management.
+Why this is useful  Redundancy: Split a master key into multiple physical plates (e.g., metal or paper) where only a specific threshold (e.</description>
     </item>
     
   </channel>
