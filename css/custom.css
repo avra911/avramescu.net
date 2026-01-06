@@ -1,3 +1,7 @@
 .theme--dark #main {
-    background-color: #121212d9 !important;
+    background-color: #121212e6 !important;
+}
+
+.theme--light #main {
+    background-color: #ffffffe6 !important;
 }
