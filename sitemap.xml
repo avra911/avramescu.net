@@ -2,16 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.avramescu.net/categories/biohacking/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.avramescu.net/categories/</loc>
-    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/diy/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/electrolytes/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/fitness/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/frugal-living/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/categories/health-optimization/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/hydration/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/minerals/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/nutrition/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/post/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/the-diy-electrolyte-protocol-pure-hydration-without-the-marketing-markup/</loc>
+    <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/cryptography/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/hardware-wallet/</loc>
-    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/post/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/projects/</loc>
@@ -23,9 +59,6 @@
     <loc>https://www.avramescu.net/tags/python/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/</loc>
-    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.avramescu.net/tags/security/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -33,9 +66,6 @@
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/slip-plate-shamir-dek-visualization-on-plates-onekey/tinyseed-style/</loc>
-    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/bitcoin/</loc>
