@@ -6,7 +6,43 @@
     <description>Recent content in Categories on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cars</title>
+      <link>https://www.avramescu.net/categories/cars/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/cars/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>europe</title>
+      <link>https://www.avramescu.net/categories/europe/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/europe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>investing</title>
+      <link>https://www.avramescu.net/categories/investing/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/investing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>personal-finance</title>
+      <link>https://www.avramescu.net/categories/personal-finance/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/personal-finance/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>biohacking</title>
       <link>https://www.avramescu.net/categories/biohacking/</link>
@@ -166,15 +202,6 @@
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/categories/buying/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cars</title>
-      <link>https://www.avramescu.net/categories/cars/</link>
-      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/categories/cars/</guid>
       <description></description>
     </item>
     
