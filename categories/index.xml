@@ -6,7 +6,52 @@
     <description>Recent content in Categories on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>developer-tools</title>
+      <link>https://www.avramescu.net/categories/developer-tools/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/developer-tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://www.avramescu.net/categories/opensource/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.avramescu.net/categories/python/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://www.avramescu.net/categories/security/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://www.avramescu.net/categories/tools/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/tools/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cars</title>
       <link>https://www.avramescu.net/categories/cars/</link>
@@ -139,15 +184,6 @@
       <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/categories/cybersecurity/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.avramescu.net/categories/python/</link>
-      <pubDate>Fri, 05 Sep 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/categories/python/</guid>
       <description></description>
     </item>
     

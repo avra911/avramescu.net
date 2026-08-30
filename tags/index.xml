@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cli</title>
+      <link>https://www.avramescu.net/tags/cli/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encoding</title>
+      <link>https://www.avramescu.net/tags/encoding/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/encoding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://www.avramescu.net/tags/github/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mnemonic</title>
+      <link>https://www.avramescu.net/tags/mnemonic/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/mnemonic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.avramescu.net/tags/python/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recode</title>
+      <link>https://www.avramescu.net/tags/recode/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/tags/recode/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ford</title>
       <link>https://www.avramescu.net/tags/ford/</link>
@@ -139,15 +193,6 @@
       <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/pypi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.avramescu.net/tags/python/</link>
-      <pubDate>Wed, 24 Dec 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/tags/python/</guid>
       <description></description>
     </item>
     
@@ -517,15 +562,6 @@
       <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github</title>
-      <link>https://www.avramescu.net/tags/github/</link>
-      <pubDate>Mon, 06 Jan 2025 10:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/tags/github/</guid>
       <description></description>
     </item>
     

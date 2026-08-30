@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/www.avramescu.net\/",
+  "author": {
+    "@type": "Person",
+    "name": "Razvan Avramescu",
+    
+    "image": "https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad"
+    
+  },
+  "name":"Razvan-Marian AVRAMESCU",
+  "description":"Memoires of a developer",
+  "url":"https:\/\/www.avramescu.net\/tags\/encoding\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.5.1-BETA">
+<meta name="author" content="Razvan Avramescu">
+<meta name="keywords" content="">
+<meta name="description" content="Memoires of a developer">
+
+
+<meta property="og:description" content="Memoires of a developer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="encoding">
+<meta name="twitter:title" content="encoding">
+<meta property="og:url" content="https://www.avramescu.net/tags/encoding/">
+<meta property="twitter:url" content="https://www.avramescu.net/tags/encoding/">
+<meta property="og:site_name" content="Razvan-Marian AVRAMESCU">
+<meta property="og:description" content="Memoires of a developer">
+<meta name="twitter:description" content="Memoires of a developer">
+<meta property="og:locale" content="en-us">
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@captivintrafic">
+
+
+  <meta name="twitter:creator" content="@captivintrafic">
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+
+
+
+
+
+
+    <title>encoding</title>
+
+    <link rel="icon" href="https://www.avramescu.net/favicon.png">
+    
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.avramescu.net/tags/encoding/index.xml">
+    
+
+    
+
+    <link rel="canonical" href="https://www.avramescu.net/tags/encoding/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://www.avramescu.net/css/style-chfakmiiydj3ocrhl1vyhgzlyhpeocbzohmrm0t1eekygzlpr3qzcfy18h.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://www.avramescu.net/css/custom.css">
+      
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCESPQLL2N"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-MCESPQLL2N', { 'anonymize_ip': false });
+}
+</script>
+
+    
+
+    
+
+    
+    <script>
+    function setTheme(themeName) {
+        if(themeName === 'dark') {
+            document.documentElement.classList.remove('theme--light');
+            document.documentElement.classList.add('theme--dark');
+        }
+        else {
+            document.documentElement.classList.remove('theme--dark');
+            document.documentElement.classList.add('theme--light');
+        }
+
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+
+    var currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    
+    if (currentTheme) {
+        if (currentTheme === 'dark') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+    else {
+        
+        if (window.matchMedia("(prefers-color-scheme: dark)")){
+            setTheme('dark');
+        }
+        else if (window.matchMedia("(prefers-color-scheme: light)")){
+            setTheme('light');
+        }
+        else {
+            
+            setTheme('dark');
+        }
+    }
+
+    var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var mqLight = window.matchMedia('(prefers-color-scheme: light)');
+    
+    function checkTheme(event) {
+        if (event.matches) {
+            if (event.media.includes('dark')) {
+                setTheme('dark');
+                document.getElementById('slider').checked = false;
+            }
+            if (event.media.includes('light')) {
+                setTheme('light');
+                document.getElementById('slider').checked = true;
+            }
+        }
+    }
+    
+    try {
+      mqDark.addEventListener('change', checkTheme);
+      mqLight.addEventListener('change', checkTheme);
+    } catch (maybeSafari) {
+      try {
+        mqDark.addListener(checkTheme);
+        mqLight.addListener(checkTheme);
+      } catch (dontknow) {
+        
+      }
+    }
+</script>
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.avramescu.net/" aria-label="Go to homepage">Razvan-Marian AVRAMESCU</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.avramescu.net/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a class="sidebar-image-link" href="https://www.avramescu.net/">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Razvan Avramescu</h4>
+        
+          <h5 class="sidebar-profile-bio">I am a father, a husband, a developer and occasionally cyclist.</h5>
+        
+        
+          <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider" aria-label="Switch between Dark and Light mode">
+    <span class="slider round"></span>
+</label>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/" title="Home">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about" title="About">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/captivintrafic" target="_blank" rel="noopener" title="Twitter">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+      
+    </ul>    
+  </div>
+</nav>
+
+      
+        
+
+      
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title">
+      
+        <a class="link-unstyled" href="https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/" aria-label="Open the post: Publishing a New Python Script: Recode Stamper">
+      
+          Publishing a New Python Script: Recode Stamper
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2026-08-30T00:00:00Z">
+        
+  August 30, 2026
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/python">python</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/opensource">opensource</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/tools">tools</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/security">security</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/developer-tools">developer-tools</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt">
+      
+        <p>I’ve just published a new Python project on GitHub: <a href="https://github.com/avra911/recode-stamper">recode-stamper</a>.</p>
+<p>The idea is simple: turn a UTF-8 string into a mnemonic phrase and convert it back later, using a structured 12- or 24-word encoding format.</p>
+      
+      <p>
+        
+          <a href="https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/" class="postShorten-excerpt_link link" aria-label="Open the post: Publishing a New Python Script: Recode Stamper">Continue reading</a>
+        
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+            
+
+          </section>
+        
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2026 Razvan Avramescu. Gorgeous theme by <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme">Thibaud Leprêtre</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Razvan Avramescu</h4>
+    
+      <div id="about-card-bio">I am a father, a husband, a developer and occasionally cyclist.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Signal Founder
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bucharest, Romania
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/avra911/image/upload/v1766830335/Gemini_Generated_Image_evvtrievvtrievvt_cdnv3o.png');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<script src="https://www.avramescu.net/js/script-yacuutxfvt1eujntvbzebtp3wsud1vohvqlhycduoqw63cdrjpjvhfdasa.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+
+    
+  </body>
+</html>
+

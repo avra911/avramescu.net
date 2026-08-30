@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>encoding on Razvan-Marian AVRAMESCU</title>
+    <link>https://www.avramescu.net/tags/encoding/</link>
+    <description>Recent content in encoding on Razvan-Marian AVRAMESCU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/encoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publishing a New Python Script: Recode Stamper</title>
+      <link>https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/</link>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/</guid>
+      <description>&lt;p&gt;I’ve just published a new Python project on GitHub: &lt;a href=&#34;https://github.com/avra911/recode-stamper&#34;&gt;recode-stamper&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The idea is simple: turn a UTF-8 string into a mnemonic phrase and convert it back later, using a structured 12- or 24-word encoding format.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
