@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Publishing a New Python Script: Recode Stamper</title>
-      <link>https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/</link>
+      <title>Publishing Recode Stamper: a tiny mnemonic CLI in Python</title>
+      <link>https://www.avramescu.net/publishing-recode-stamper-a-tiny-mnemonic-cli-in-python/</link>
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/</guid>
-      <description>&lt;p&gt;I’ve just published a new Python project on GitHub: &lt;a href=&#34;https://github.com/avra911/recode-stamper&#34;&gt;recode-stamper&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The idea is simple: turn a UTF-8 string into a mnemonic phrase and convert it back later, using a structured 12- or 24-word encoding format.&lt;/p&gt;</description>
+      <guid>https://www.avramescu.net/publishing-recode-stamper-a-tiny-mnemonic-cli-in-python/</guid>
+      <description>&lt;p&gt;I’ve just published a small Python utility called &lt;a href=&#34;https://github.com/avra911/recode-stamper&#34;&gt;recode-stamper&lt;/a&gt; and it is also available on PyPI at &lt;a href=&#34;https://pypi.org/project/recode-stamper/&#34;&gt;https://pypi.org/project/recode-stamper/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The idea is simple: take a UTF-8 string, turn it into a readable mnemonic phrase and decode it back later using a fixed 4096-word list.&lt;/p&gt;</description>
     </item>
     
     <item>

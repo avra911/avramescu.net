@@ -26,7 +26,10 @@
     <loc>https://www.avramescu.net/post/</loc>
     <lastmod>2026-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.avramescu.net/publishing-a-new-python-script-recode-stamper/</loc>
+    <loc>https://www.avramescu.net/publishing-recode-stamper-a-tiny-mnemonic-cli-in-python/</loc>
+    <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.avramescu.net/tags/pypi/</loc>
     <lastmod>2026-08-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/python/</loc>
@@ -123,9 +126,6 @@
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/categories/projects/</loc>
-    <lastmod>2025-12-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.avramescu.net/tags/pypi/</loc>
     <lastmod>2025-12-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.avramescu.net/tags/security/</loc>
