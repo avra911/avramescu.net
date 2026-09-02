@@ -6,7 +6,52 @@
     <description>Recent content in Categories on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>home-automation</title>
+      <link>https://www.avramescu.net/categories/home-automation/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/home-automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iot</title>
+      <link>https://www.avramescu.net/categories/iot/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/iot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://www.avramescu.net/categories/python/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react-native</title>
+      <link>https://www.avramescu.net/categories/react-native/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/react-native/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>smart-home</title>
+      <link>https://www.avramescu.net/categories/smart-home/</link>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.avramescu.net/categories/smart-home/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>developer-tools</title>
       <link>https://www.avramescu.net/categories/developer-tools/</link>
@@ -22,15 +67,6 @@
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       
       <guid>https://www.avramescu.net/categories/opensource/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://www.avramescu.net/categories/python/</link>
-      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.avramescu.net/categories/python/</guid>
       <description></description>
     </item>
     
