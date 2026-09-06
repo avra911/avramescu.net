@@ -416,7 +416,7 @@ if (!doNotTrack) {
 <p>Since my initial setup, I&rsquo;ve expanded the architecture significantly:</p>
 <ol>
 <li><strong>Added Zigbee Temperature Integration</strong>: Integrated indoor and outdoor Zigbee sensors to dynamically calculate thermal efficiency. If the outdoor air is closer to my target temperature ($22^\circ\text{C}$) than the indoor air, the system shifts flow modes to leverage direct outdoor air exchange.</li>
-<li><strong>Refined Automation &amp; Lockout Timers</strong>: To prevent the fan from &ldquo;chattering&rdquo; or bouncing speeds when CO2 hovers near thresholds, I implemented intelligent speed-tier rules paired with a 30-minute minimum hold timer. This ensures the unit remains whisper-quiet at night (Speed 1 or 2) while reserving emergency speeds (Speed 3) strictly for heavy spikes.</li>
+<li><strong>Refined Automation &amp; Lockout Timers</strong>: To prevent the fan from &ldquo;chattering&rdquo; or bouncing speeds when CO2 hovers near thresholds, I implemented intelligent speed-tier rules paired with a strict 30-minute minimum hold timer. This ensures the unit remains whisper-quiet at night while reserving emergency speeds (Speed 3 during the day, Speed 2 at night) strictly for heavy spikes.</li>
 </ol>
 <hr>
 <h2 id="the-hardware-and-architecture">The Hardware and Architecture</h2>
@@ -496,24 +496,27 @@ if (!doNotTrack) {
 </tbody>
 </table>
 <h3 id="quiet-first-speed-logic-with-30-minute-lockout">Quiet-First Speed Logic with 30-Minute Lockout</h3>
-<p>To ensure the bedroom stays quiet at night, the script evaluates time-of-night windows, applies a quiet baseline (Speed 1 at night, Speed 2 during the day), reserves Speed 3 only for severe CO2 spikes, and locks speed changes for at least 30 minutes to eliminate annoying oscillations:</p>
+<p>To ensure the bedroom stays quiet at night, the script evaluates time-of-night windows, applies a quiet baseline (Speed 1 at night, Speed 2 during the day), caps nighttime emergencies at Speed 2 (reserving Speed 3 for the day), and strictly locks all speed changes for at least 30 minutes to eliminate annoying oscillations:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_get_target_speed</span>(co2: int) <span style="color:#f92672">-&gt;</span> int:
     current_hour <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now(ZoneInfo(<span style="color:#e6db74">&#34;Europe/Bucharest&#34;</span>))<span style="color:#f92672">.</span>hour
     is_night <span style="color:#f92672">=</span> current_hour <span style="color:#f92672">&gt;=</span> NIGHT_START_HOUR <span style="color:#f92672">or</span> current_hour <span style="color:#f92672">&lt;</span> NIGHT_END_HOUR
-    
-    <span style="color:#75715e"># If CO2 is extremely high, use Speed 3 as an emergency override</span>
-    <span style="color:#66d9ef">if</span> co2 <span style="color:#f92672">&gt;</span> CO2_HIGH_THRESHOLD:
-        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>
 
-    <span style="color:#75715e"># Otherwise, keep it quiet: Speed 1 at night, Speed 2 during the day</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> is_night <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">2</span>
-</code></pre></div><p>Combined with our 30-minute lockout timer logic inside the polling task:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Speed Lockout Evaluation (30-minute minimum hold timer)</span>
+    <span style="color:#75715e"># If CO2 is extremely high, use Speed 3 (override for heavy pollution/crowds)</span>
+    <span style="color:#66d9ef">if</span> co2 <span style="color:#f92672">&gt;</span> CO2_HIGH_THRESHOLD:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">if</span> is_night <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">3</span>
+
+    <span style="color:#75715e"># If CO2 is moderate, keep it quiet: Speed 1 at night, Speed 2 during the day</span>
+    <span style="color:#66d9ef">if</span> co2 <span style="color:#f92672">&gt;</span> CO2_LOW_THRESHOLD:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> is_night <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">2</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><p>Combined with our strict 30-minute lockout timer logic inside the polling task:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 5. Speed Lockout Evaluation (strict 30-minute minimum hold timer for ALL speeds)</span>
 <span style="color:#66d9ef">if</span> state_dict<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;speed&#34;</span>) <span style="color:#f92672">!=</span> target_speed:
     now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now(ZoneInfo(<span style="color:#e6db74">&#34;Europe/Bucharest&#34;</span>))
     speed_change_allowed <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
 
-    <span style="color:#66d9ef">if</span> last_speed_change_time <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span> <span style="color:#f92672">and</span> target_speed <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+    <span style="color:#66d9ef">if</span> last_speed_change_time <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
         <span style="color:#66d9ef">if</span> (now <span style="color:#f92672">-</span> last_speed_change_time) <span style="color:#f92672">&lt;</span> timedelta(minutes<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>):
             speed_change_allowed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
 
@@ -523,7 +526,7 @@ if (!doNotTrack) {
         last_speed_change_time <span style="color:#f92672">=</span> now
         <span style="color:#75715e"># Fire IR command...</span>
     <span style="color:#66d9ef">else</span>:
-        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Speed change to </span><span style="color:#e6db74">{</span>target_speed<span style="color:#e6db74">}</span><span style="color:#e6db74"> deferred (locked for 30 min).&#34;</span>)
+        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Speed change to </span><span style="color:#e6db74">{</span>target_speed<span style="color:#e6db74">}</span><span style="color:#e6db74"> deferred (locked for 30 min window).&#34;</span>)
 </code></pre></div><hr>
 <h2 id="overcoming-frontend-hurdles">Overcoming Frontend Hurdles</h2>
 <p>Building the frontend wasn’t without its quirks. I chose <strong>Expo</strong> and <strong>React Native</strong> to get up and running quickly on an Android device, navigating classic mobile development challenges like local network binding, asset configuration, and peer-dependency lockouts with React 19. Sideloading the latest builds kept the Metro Bundler humming seamlessly.</p>
