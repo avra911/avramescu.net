@@ -6,15 +6,15 @@
     <description>Recent content in iot on Razvan-Marian AVRAMESCU</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.avramescu.net/categories/iot/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Building a Local Smart Home Hub: Unifying HRV and Air Quality</title>
-      <link>https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-and-air-quality/</link>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <title>Building a Local Smart Home Hub: Unifying HRV, Zigbee Sensors and Air Quality</title>
+      <link>https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/</link>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       
-      <guid>https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-and-air-quality/</guid>
-      <description>&lt;p&gt;I’ve just wrapped up a project that brings together a &lt;strong&gt;NovingAIR PHANTOM Wireless 160&lt;/strong&gt; heat recovery ventilation (HRV) unit and an 8-in-1 air quality monitor into one local smart home control system.&lt;/p&gt;
-&lt;p&gt;The idea is simple: monitor indoor air quality in real time and automatically control ventilation speed to keep the space healthy, all from a custom mobile dashboard.&lt;/p&gt;</description>
+      <guid>https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/</guid>
+      <description>&lt;p&gt;I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a &lt;strong&gt;NovingAIR PHANTOM Wireless 160&lt;/strong&gt; heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external &lt;strong&gt;Zigbee temperature sensors&lt;/strong&gt; into a unified automation hub.&lt;/p&gt;
+&lt;p&gt;The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.&lt;/p&gt;</description>
     </item>
     
   </channel>

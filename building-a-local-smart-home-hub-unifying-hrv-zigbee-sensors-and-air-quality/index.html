@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/www.avramescu.net\/",
+  "author": {
+    "@type": "Person",
+    "name": "Razvan Avramescu",
+    
+    "image": "https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad"
+    
+  },
+  "name":"Razvan-Marian AVRAMESCU",
+  "description":"\u003cp\u003eI’ve just wrapped up a major upgrade to my local smart home control system, which integrates a \u003cstrong\u003eNovingAIR PHANTOM Wireless 160\u003c\/strong\u003e heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external \u003cstrong\u003eZigbee temperature sensors\u003c\/strong\u003e into a unified automation hub.\u003c\/p\u003e\n\u003cp\u003eThe idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.\u003c\/p\u003e",
+  "url":"https:\/\/www.avramescu.net\/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality\/",
+  "keywords":"[]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.85.0 with theme Tranquilpeak 0.5.1-BETA">
+<meta name="author" content="Razvan Avramescu">
+<meta name="keywords" content="">
+<meta name="description" content="I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a NovingAIR PHANTOM Wireless 160 heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external Zigbee temperature sensors into a unified automation hub.
+The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.">
+
+
+<meta property="og:description" content="I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a NovingAIR PHANTOM Wireless 160 heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external Zigbee temperature sensors into a unified automation hub.
+The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building a Local Smart Home Hub: Unifying HRV, Zigbee Sensors and Air Quality">
+<meta name="twitter:title" content="Building a Local Smart Home Hub: Unifying HRV, Zigbee Sensors and Air Quality">
+<meta property="og:url" content="https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/">
+<meta property="twitter:url" content="https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/">
+<meta property="og:site_name" content="Razvan-Marian AVRAMESCU">
+<meta property="og:description" content="I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a NovingAIR PHANTOM Wireless 160 heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external Zigbee temperature sensors into a unified automation hub.
+The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.">
+<meta name="twitter:description" content="I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a NovingAIR PHANTOM Wireless 160 heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external Zigbee temperature sensors into a unified automation hub.
+The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2026-09-06T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2026-09-06T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="iot">
+    
+      <meta property="article:section" content="python">
+    
+      <meta property="article:section" content="react-native">
+    
+      <meta property="article:section" content="smart-home">
+    
+      <meta property="article:section" content="home-automation">
+    
+  
+  
+    
+      <meta property="article:tag" content="fastapi">
+    
+      <meta property="article:tag" content="expo">
+    
+      <meta property="article:tag" content="tuya">
+    
+      <meta property="article:tag" content="zigbee">
+    
+      <meta property="article:tag" content="air-quality">
+    
+      <meta property="article:tag" content="hrv">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@captivintrafic">
+
+
+  <meta name="twitter:creator" content="@captivintrafic">
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=640">
+
+
+
+
+
+
+    <title>Building a Local Smart Home Hub: Unifying HRV, Zigbee Sensors and Air Quality</title>
+
+    <link rel="icon" href="https://www.avramescu.net/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://www.avramescu.net/css/style-chfakmiiydj3ocrhl1vyhgzlyhpeocbzohmrm0t1eekygzlpr3qzcfy18h.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://www.avramescu.net/css/custom.css">
+      
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MCESPQLL2N"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-MCESPQLL2N', { 'anonymize_ip': false });
+}
+</script>
+
+    
+
+    
+
+    
+    <script>
+    function setTheme(themeName) {
+        if(themeName === 'dark') {
+            document.documentElement.classList.remove('theme--light');
+            document.documentElement.classList.add('theme--dark');
+        }
+        else {
+            document.documentElement.classList.remove('theme--dark');
+            document.documentElement.classList.add('theme--light');
+        }
+
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+
+    var currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    
+    if (currentTheme) {
+        if (currentTheme === 'dark') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+    else {
+        
+        if (window.matchMedia("(prefers-color-scheme: dark)")){
+            setTheme('dark');
+        }
+        else if (window.matchMedia("(prefers-color-scheme: light)")){
+            setTheme('light');
+        }
+        else {
+            
+            setTheme('dark');
+        }
+    }
+
+    var mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+    var mqLight = window.matchMedia('(prefers-color-scheme: light)');
+    
+    function checkTheme(event) {
+        if (event.matches) {
+            if (event.media.includes('dark')) {
+                setTheme('dark');
+                document.getElementById('slider').checked = false;
+            }
+            if (event.media.includes('light')) {
+                setTheme('light');
+                document.getElementById('slider').checked = true;
+            }
+        }
+    }
+    
+    try {
+      mqDark.addEventListener('change', checkTheme);
+      mqLight.addEventListener('change', checkTheme);
+    } catch (maybeSafari) {
+      try {
+        mqDark.addListener(checkTheme);
+        mqLight.addListener(checkTheme);
+      } catch (dontknow) {
+        
+      }
+    }
+</script>
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.avramescu.net/" aria-label="Go to homepage">Razvan-Marian AVRAMESCU</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.avramescu.net/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a class="sidebar-image-link" href="https://www.avramescu.net/">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Razvan Avramescu</h4>
+        
+          <h5 class="sidebar-profile-bio">I am a father, a husband, a developer and occasionally cyclist.</h5>
+        
+        
+          <label id="switch" class="switch">
+    <input type="checkbox" onchange="toggleTheme()" id="slider" aria-label="Switch between Dark and Light mode">
+    <span class="slider round"></span>
+</label>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/" title="Home">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/avra911" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/razvan-avramescu/" target="_blank" rel="noopener" title="Linkedin">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">Linkedin</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.avramescu.net/#about" title="About">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/captivintrafic" target="_blank" rel="noopener" title="Twitter">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-twitter"></i>
+      
+      <span class="sidebar-button-desc">Twitter</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+      
+    </ul>    
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Building a Local Smart Home Hub: Unifying HRV, Zigbee Sensors and Air Quality
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2026-09-06T00:00:00Z">
+        
+  September 6, 2026
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/iot">iot</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/python">python</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/react-native">react-native</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/smart-home">smart-home</a>, 
+    
+      <a class="category-link" href="https://www.avramescu.net/categories/home-automation">home-automation</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>I’ve just wrapped up a major upgrade to my local smart home control system, which integrates a <strong>NovingAIR PHANTOM Wireless 160</strong> heat recovery ventilation (HRV) unit, an 8-in-1 Tuya air quality monitor, and external <strong>Zigbee temperature sensors</strong> into a unified automation hub.</p>
+<p>The idea is simple: monitor indoor air quality and thermal dynamics in real time, factor in outdoor weather conditions via Zigbee, and automatically control ventilation speeds with built-in lockout timers to keep the space healthy and quiet—all from a custom mobile dashboard.</p>
+<p><img src="https://res.cloudinary.com/avra911/image/upload/v1788324194/Screenshot_from_2026-09-02_07-42-53_rk3qdx.png" alt="React Native App Dashboard - Landscape">
+<em>My responsive React Native dashboard visualizing live sensor telemetry, thermal flows, and manual control overrides.</em></p>
+<hr>
+<h2 id="why-i-built-it-and-the-new-additions">Why I built it and the new additions</h2>
+<p>It started with a common problem: waking up in a stuffy bedroom. I had a standalone NovingAIR PHANTOM unit and an 8-in-1 Air Quality Monitor, but they didn’t talk to each other.</p>
+<p>Since my initial setup, I&rsquo;ve expanded the architecture significantly:</p>
+<ol>
+<li><strong>Added Zigbee Temperature Integration</strong>: Integrated indoor and outdoor Zigbee sensors to dynamically calculate thermal efficiency. If the outdoor air is closer to my target temperature ($22^\circ\text{C}$) than the indoor air, the system shifts flow modes to leverage direct outdoor air exchange.</li>
+<li><strong>Refined Automation &amp; Lockout Timers</strong>: To prevent the fan from &ldquo;chattering&rdquo; or bouncing speeds when CO2 hovers near thresholds, I implemented intelligent speed-tier rules paired with a 30-minute minimum hold timer. This ensures the unit remains whisper-quiet at night (Speed 1 or 2) while reserving emergency speeds (Speed 3) strictly for heavy spikes.</li>
+</ol>
+<hr>
+<h2 id="the-hardware-and-architecture">The Hardware and Architecture</h2>
+<p>The project relies on a robust local network stack:</p>
+<ol>
+<li><strong>8-in-1 Air Quality Monitor</strong>: A Tuya-based sensor (Protocol 3.5) reporting CO2, temperature, humidity, PM1.0, PM2.5, PM10, TVOC, and HCHO.</li>
+<li><strong>Zigbee Sensors</strong>: Wireless indoor and outdoor temperature sensors polled securely via cloud/gateway integration.</li>
+<li><strong>Phantom IR Blaster</strong>: A Tuya device (Protocol 3.3) sending infrared signals to the NovingAIR unit.</li>
+</ol>
+<p>The architecture is divided into two layers:</p>
+<ul>
+<li><strong>The Backend (FastAPI)</strong>: A Python server handling continuous background polling, thermal comparisons, state saving, and asynchronous task loops.</li>
+<li><strong>The Frontend (React Native/Expo)</strong>: A cross-platform mobile application providing a sleek UI to view live data and manually override HRV modes.</li>
+</ul>
+<p>The complete source code for the project is available on <a href="https://github.com/avra911/NovingAir-Phantom-Wireless-Controller">GitHub</a>.</p>
+<hr>
+<h2 id="the-power-of-automation">The Power of Automation</h2>
+<p>The real magic of this setup is the adaptive automation loop. The FastAPI backend continuously evaluates air quality metrics against healthy indoor thresholds:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Good</th>
+<th>Moderate</th>
+<th>Unhealthy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CO2</td>
+<td>&lt;800 ppm</td>
+<td>800-1200</td>
+<td>&gt;1200</td>
+</tr>
+<tr>
+<td>Temp</td>
+<td>18-24°C</td>
+<td>15-28°C</td>
+<td>&lt;15 or &gt;28</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>30-50%</td>
+<td>25-60%</td>
+<td>&lt;25 or &gt;60%</td>
+</tr>
+<tr>
+<td>PM1.0</td>
+<td>&lt;12 µg/m³</td>
+<td>12-35</td>
+<td>35-55 | &gt;55</td>
+</tr>
+<tr>
+<td>PM2.5</td>
+<td>&lt;12 µg/m³</td>
+<td>12-35</td>
+<td>35-55 | &gt;55</td>
+</tr>
+<tr>
+<td>PM10</td>
+<td>&lt;12 µg/m³</td>
+<td>12-35</td>
+<td>35-55 | &gt;55</td>
+</tr>
+<tr>
+<td>TVOC</td>
+<td>&lt;0.3 mg/m³</td>
+<td>0.3-1.0</td>
+<td>&gt;1.0</td>
+</tr>
+<tr>
+<td>HCHO</td>
+<td>&lt;0.05 mg/m³</td>
+<td>0.05-0.1</td>
+<td>&gt;0.1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quiet-first-speed-logic-with-30-minute-lockout">Quiet-First Speed Logic with 30-Minute Lockout</h3>
+<p>To ensure the bedroom stays quiet at night, the script evaluates time-of-night windows, applies a quiet baseline (Speed 1 at night, Speed 2 during the day), reserves Speed 3 only for severe CO2 spikes, and locks speed changes for at least 30 minutes to eliminate annoying oscillations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_get_target_speed</span>(co2: int) <span style="color:#f92672">-&gt;</span> int:
+    current_hour <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now(ZoneInfo(<span style="color:#e6db74">&#34;Europe/Bucharest&#34;</span>))<span style="color:#f92672">.</span>hour
+    is_night <span style="color:#f92672">=</span> current_hour <span style="color:#f92672">&gt;=</span> NIGHT_START_HOUR <span style="color:#f92672">or</span> current_hour <span style="color:#f92672">&lt;</span> NIGHT_END_HOUR
+    
+    <span style="color:#75715e"># If CO2 is extremely high, use Speed 3 as an emergency override</span>
+    <span style="color:#66d9ef">if</span> co2 <span style="color:#f92672">&gt;</span> CO2_HIGH_THRESHOLD:
+        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">3</span>
+
+    <span style="color:#75715e"># Otherwise, keep it quiet: Speed 1 at night, Speed 2 during the day</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">if</span> is_night <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">2</span>
+</code></pre></div><p>Combined with our 30-minute lockout timer logic inside the polling task:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Speed Lockout Evaluation (30-minute minimum hold timer)</span>
+<span style="color:#66d9ef">if</span> state_dict<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;speed&#34;</span>) <span style="color:#f92672">!=</span> target_speed:
+    now <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>now(ZoneInfo(<span style="color:#e6db74">&#34;Europe/Bucharest&#34;</span>))
+    speed_change_allowed <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+
+    <span style="color:#66d9ef">if</span> last_speed_change_time <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span> <span style="color:#f92672">and</span> target_speed <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">if</span> (now <span style="color:#f92672">-</span> last_speed_change_time) <span style="color:#f92672">&lt;</span> timedelta(minutes<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>):
+            speed_change_allowed <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+
+    <span style="color:#66d9ef">if</span> speed_change_allowed:
+        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Speed changed -&gt; </span><span style="color:#e6db74">{</span>target_speed<span style="color:#e6db74">}</span><span style="color:#e6db74"> (CO2: </span><span style="color:#e6db74">{</span>co2<span style="color:#e6db74">}</span><span style="color:#e6db74">)&#34;</span>)
+        state_dict[<span style="color:#e6db74">&#34;speed&#34;</span>] <span style="color:#f92672">=</span> target_speed
+        last_speed_change_time <span style="color:#f92672">=</span> now
+        <span style="color:#75715e"># Fire IR command...</span>
+    <span style="color:#66d9ef">else</span>:
+        logging<span style="color:#f92672">.</span>info(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Speed change to </span><span style="color:#e6db74">{</span>target_speed<span style="color:#e6db74">}</span><span style="color:#e6db74"> deferred (locked for 30 min).&#34;</span>)
+</code></pre></div><hr>
+<h2 id="overcoming-frontend-hurdles">Overcoming Frontend Hurdles</h2>
+<p>Building the frontend wasn’t without its quirks. I chose <strong>Expo</strong> and <strong>React Native</strong> to get up and running quickly on an Android device, navigating classic mobile development challenges like local network binding, asset configuration, and peer-dependency lockouts with React 19. Sideloading the latest builds kept the Metro Bundler humming seamlessly.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This project has evolved into a comprehensive, self-contained local hub running 24/7 on an Ubuntu machine. By integrating Zigbee telemetry and debounce lockout rules, the system balances high air quality with complete acoustic peace.</p>
+<p>It’s a powerful testament to what open-source home automation can achieve when you take full control of your hardware and data workflows.</p>
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/fastapi/">fastapi</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/expo/">expo</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/tuya/">tuya</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/zigbee/">zigbee</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/air-quality/">air-quality</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.avramescu.net/tags/hrv/">hrv</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.avramescu.net/publishing-recode-stamper-a-tiny-mnemonic-cli-in-python/" data-tooltip="Publishing Recode Stamper: a tiny mnemonic CLI in Python" aria-label="PREVIOUS: Publishing Recode Stamper: a tiny mnemonic CLI in Python">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Google&#43;" aria-label="Share on %s Google&#43;">
+              <i class="fab fa-google-plus" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/www.avramescu.net\/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality\/';
+        
+          this.page.identifier = '\/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'avramescu-net';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2026 Razvan Avramescu. Gorgeous theme by <a target="_blank" href="https://github.com/kakawait/hugo-tranquilpeak-theme">Thibaud Leprêtre</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.avramescu.net/publishing-recode-stamper-a-tiny-mnemonic-cli-in-python/" data-tooltip="Publishing Recode Stamper: a tiny mnemonic CLI in Python" aria-label="PREVIOUS: Publishing Recode Stamper: a tiny mnemonic CLI in Python">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://www.avramescu.net/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality/" title="Share on %s Google&#43;" aria-label="Share on %s Google&#43;">
+              <i class="fab fa-google-plus" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.avramescu.net%2Fbuilding-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality%2F" aria-label="Share on %s Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fwww.avramescu.net%2Fbuilding-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality%2F" aria-label="Share on %s Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fwww.avramescu.net%2Fbuilding-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality%2F" aria-label="Share on %s Google&#43;">
+          <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/49b07cb9e0a35138a614bd93c12079ad?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Razvan Avramescu</h4>
+    
+      <div id="about-card-bio">I am a father, a husband, a developer and occasionally cyclist.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Signal Founder
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Bucharest, Romania
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/avra911/image/upload/v1766830335/Gemini_Generated_Image_evvtrievvtrievvt_cdnv3o.png');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<script src="https://www.avramescu.net/js/script-yacuutxfvt1eujntvbzebtp3wsud1vohvqlhycduoqw63cdrjpjvhfdasa.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.avramescu.net\/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality\/';
+          
+            this.page.identifier = '\/building-a-local-smart-home-hub-unifying-hrv-zigbee-sensors-and-air-quality\/'
+          
+        };
+        $(function(){
+          showDisqus = function(){
+            
+            
+            if (window.location.hostname == "localhost") {
+              return;
+            }
+
+            var disqus_shortname = 'avramescu-net';
+
+            (function() {
+              var disqus = document.createElement('script'); 
+              disqus.type = 'text/javascript'; 
+              disqus.async = true;
+              disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+            })();
+          };
+          $('#show-comments').on('click', showDisqus);
+          $('#show-comments-2').on('click', showDisqus);
+        });
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
