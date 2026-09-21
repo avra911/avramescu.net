@@ -5,3 +5,7 @@
 .theme--light #main {
     background-color: #ffffffe6 !important;
 }
+
+.theme--dark .post .post-content img {
+    filter: none !important;
+}
