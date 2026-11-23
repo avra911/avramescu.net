@@ -6,6 +6,42 @@
     background-color: #ffffffe6 !important;
 }
 
+.page-not-found {
+    box-sizing: border-box;
+    display: grid;
+    min-height: 100vh;
+    padding: 2rem;
+    place-items: center;
+}
+
+.page-not-found .post {
+    box-sizing: border-box;
+    width: min(100%, 34rem);
+    margin: 0;
+    padding: clamp(2rem, 6vw, 4rem);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.24);
+    color: #202522;
+    text-align: center;
+    backdrop-filter: blur(12px);
+}
+
+.page-not-found .post h1 {
+    margin-top: 0;
+    color: #202522;
+}
+
+.page-not-found .post p {
+    color: #424a45;
+}
+
+.page-not-found .post a {
+    color: #b34d2c;
+    font-weight: 600;
+}
+
 .theme--dark .post .post-content img {
     filter: none !important;
 }
